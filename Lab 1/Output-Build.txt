@@ -1,0 +1,5 @@
+﻿1>------ Build started: Project: Lab 1, Configuration: Debug Win32 ------
+1>MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+1>D:\Users\arkozak\Source\Repos\Arkozak\New-Repo\Lab 1\Debug\Lab 1.exe : fatal error LNK1120: 1 unresolved externals
+1>Done building project "Lab 1.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
