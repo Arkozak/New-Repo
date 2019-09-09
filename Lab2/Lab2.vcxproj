@@ -123,8 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="characterBox.cpp" />
-    <ClCompile Include="countingLoop.cpp" />
+    <ClCompile Include="Lab2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
