@@ -9,14 +9,14 @@
 using std::cout;
 using std::endl;
 
-int main()
+int box()
 {
 	int x = 0;
 	int y = 0;
 
-	while (x <= 8)
+	while (x < 10)
 	{
-		while (y <= 6)
+		while (y < 60)
 		{
 			cout << "~";
 			y = y + 1;
