@@ -70,13 +70,19 @@ void betterBox()
 
 int main()
 {
+	cout << "Lab 2 part 1" << endl;
+
 	counting();
 
 	cout << endl << endl;
 
+	cout << "Lab 2 part 2" << endl;
+
 	box();
 
 	cout << endl << endl;
+
+	cout << "Lab 2 part 3" << endl;
 
 	betterBox();
 
