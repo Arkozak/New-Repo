@@ -12,7 +12,7 @@ using std::cin;
 
 int greatest()
 {
-	int x = 0; //Initializing my variables
+	int x = 1; //Initializing my variables
 	int y = 0;
 
 	while (x > 0) //Creating a loop until the user enters 0 
