@@ -10,7 +10,7 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-int main()
+int diamond()
 {
 	int dSize;
 	int x = 0;
