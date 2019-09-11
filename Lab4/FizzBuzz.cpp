@@ -12,19 +12,19 @@ using std::endl;
 
 int main()
 {
-	for (int i = 1; i <= 100; i++)
+	for (int i = 1; i <= 100; i++) //Counting to 100
 	{
-		if ((i % 15) == 0)
+		if ((i % 15) == 0) //If i is divisible by 3 and 5
 		{
 			cout << "FizzBuzz" << endl;
 		}
 
-		else if ((i % 3) == 0)
+		else if ((i % 3) == 0) //If i is divisible by 3 
 		{
 			cout << "Fizz" << endl;	
 		}
 
-		else if ((i % 5) == 0)
+		else if ((i % 5) == 0) //If i is divisible by 5
 		{
 			cout << "Buzz" << endl;
 		}
