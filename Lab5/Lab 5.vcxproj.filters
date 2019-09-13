@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HelloWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Poem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VideoGame.cpp">
+    <ClCompile Include="BaseLab.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
