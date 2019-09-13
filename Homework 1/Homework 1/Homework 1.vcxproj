@@ -126,6 +126,7 @@
     <ClCompile Include="Diamond.cpp" />
     <ClCompile Include="greatest.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="distance.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
