@@ -78,11 +78,29 @@ void greatest()
 
 }
 
+void distance()
+{
+	int x = 0;
+
+	cout << "Give a distance you want changed from miles to kilometers: ";
+
+	cin >> x;
+
+	cout << endl << "The given distance in kilometers is :" << x * 1.609 << "km";
+
+}
+
 int main()
 {
 	diamond();
 
+	cout << endl;
+
 	greatest();
+
+	cout << endl;
+
+	distance();
 
 	return 0;
 }
