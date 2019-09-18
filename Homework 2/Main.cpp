@@ -1,6 +1,6 @@
-/* Andrew Kozak 
+/* Andrew Kozak
 09/16/2019
-name.cpp*/
+Main.cpp*/
 
 #include <iostream>
 #include <string>
@@ -12,7 +12,7 @@ using std::getline;
 using std::vector;
 using std::string;
 
-int names()
+void names()
 {
 	vector<string> names;
 	string pulled;
@@ -38,6 +38,9 @@ int names()
 	}
 
 	cout << "The name is in the list " << count << " times";
+}
 
-	return 0;
+int main()
+{
+	names();
 }
