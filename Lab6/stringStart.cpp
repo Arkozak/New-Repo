@@ -46,11 +46,13 @@ void additionalTwo()
 	getline(cin, userStr);
 	tempStr = userStr;
 
-	tempStr.resize(userStr.size());
+	int x = userStr.size();
+	tempStr.resize(x);
 
-	for (int x = 0; x < userStr.size() + 1; x++)
+	while (x > 0)
 	{
-		tempStr.at(x) = userStr.at(userStr.size() - 1); // fix me
+		tempStr.at(x - 1) = userStr.at(userStr.size() - x);
+		x = x - 1;
 	}
 
 	cout << tempStr;
@@ -66,7 +68,9 @@ int main()
 
 	additionalOne();
 
-	
+	cout << endl;
+
+	additionalTwo();
 
 	return 0;
 }
