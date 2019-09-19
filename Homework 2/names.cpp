@@ -17,7 +17,7 @@ int names()
 	vector<string> names;
 	string pulled;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		cout << "Enter a name: ";
 		getline(cin, pulled);
