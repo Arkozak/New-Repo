@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Money.cpp" />
     <ClCompile Include="names.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
