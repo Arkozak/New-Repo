@@ -1,3 +1,7 @@
+/* Andrew Kozak
+09/22/2019
+Money.cpp
+This code adds all your coins up*/
 
 #include <iostream>
 #include <vector>

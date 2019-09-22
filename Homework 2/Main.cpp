@@ -11,6 +11,7 @@ using std::endl;
 using std::getline;
 using std::vector;
 using std::string;
+using std::pow;
 
 void namesMachOne()
 {
@@ -424,11 +425,51 @@ void moneyMath()
 
 void rice()
 {
+	int x = 0;
+	int i = 1;
+	double z = 0.0; 
+
+	for (int y = 1; y <= 3; y++)
+	{
+		while (x < pow(1000,y))
+		{
+			x = x + pow(2, i);
+			i = i + 1;
+		}
+
+		cout << "It would take " << i << " squares to reach at least " << pow(1000,y) << " grains of rice" << endl;
+		x = 0;
+		i = 0;
+	}
+
+	while (x < 2147483647)
+	{
+		x = x + pow(2, i);
+		i = i + 1;
+	}
+	cout << "You could only account for " << i << " squares using an integer" << endl;
 	
+	i = 0;
+
+	while (i < 64)
+	{
+		z = z + pow(2, i);
+		i = i + 1;
+	}
+	cout << std::fixed << "You can account for all 64 squared using a double. As shown here: " << z;
+
 }
 
 int main()
 {
+	namesMachOne();
+
+	namesMachTwo();
+
+	namesMachThree();
+
+	moneyMath();
+
 	rice();
 	return 0;
 }

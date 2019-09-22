@@ -1,6 +1,9 @@
 /* Andrew Kozak 
 09/16/2019
-name.cpp*/
+name.cpp
+This code takes the entered line, stitches all the letters to a set of 2 number,
+then moved the first numeber to the back, then returns the numbers to letters
+with the same letter-number scale*/
 
 #include <iostream>
 #include <string>

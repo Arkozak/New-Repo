@@ -24,5 +24,8 @@
     <ClCompile Include="Money.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
