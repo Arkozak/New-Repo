@@ -22,7 +22,8 @@ int rice()
 			i = i + 1;
 		}
 
-		cout << "It would take " << i << " squares to reach at least " << pow(1000, y) << " grains of rice" << endl;
+		cout << "It would take " << i << " squares to reach at least ";
+		cout << pow(1000, y) << " grains of rice" << endl;
 		x = 0;
 		i = 0;
 	}
@@ -32,7 +33,8 @@ int rice()
 		x = x + pow(2, i);
 		i = i + 1;
 	}
-	cout << "You could only account for " << i << " squares using an integer" << endl;
+	cout << "You could only account for " << i;
+	cout << " squares using an integer" << endl;
 
 	i = 0;
 
@@ -41,7 +43,8 @@ int rice()
 		z = z + pow(2, i);
 		i = i + 1;
 	}
-	cout << std::fixed << "You can account for all 64 squared using a double. As shown here: " << z;
+	cout << std::fixed << "You can account for all 64 squared using a double.";
+	cout << "As shown here : " << z;
 
 	return 0;
 }
