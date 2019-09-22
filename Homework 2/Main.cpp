@@ -471,5 +471,6 @@ int main()
 	moneyMath();
 
 	rice();
+
 	return 0;
 }
