@@ -1,6 +1,9 @@
-/* Andrew Kozak 
+/* Andrew Kozak
 09/16/2019
-name.cpp*/
+name.cpp
+This code takes the entered line, stitches all the letters to a set of 2 number,
+then moved the first numeber to the back, then returns the numbers to letters
+with the same letter-number scale*/
 
 #include <iostream>
 #include <string>
@@ -12,7 +15,58 @@ using std::getline;
 using std::vector;
 using std::string;
 
-int names()
+void namesOne()
+{
+	vector<string> names;
+	string pulled;
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "Enter a name: ";
+		getline(cin, pulled);
+		names.push_back(pulled);
+	}
+
+	cout << "Enter a name to see if it is in the list: ";
+	getline(cin, pulled);
+
+	int count = 0;
+
+	for (int x = 0; x < 10; x++)
+	{
+		if (pulled == names.at(x))
+		{
+			count = count + 1;
+		}
+	}
+
+	cout << "The name is in the list " << count << " times";
+}
+
+
+
+void namesTwo()
+{
+	vector<string> names;
+	string pulled;
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "Enter a name: ";
+		getline(cin, pulled);
+		names.push_back(pulled);
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << names.at(i) << endl;
+	}
+
+}
+
+
+
+void namesThree()
 {
 	vector<string> names;
 	string pulled;
@@ -270,6 +324,17 @@ int names()
 		finalstr.clear();
 
 	}
+}
+
+
+
+int names()
+{
+	namesOne();
+
+	namesTwo();
+
+	namesThree();
 
 	return 0;
 }

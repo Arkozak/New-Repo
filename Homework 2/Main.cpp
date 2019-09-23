@@ -11,6 +11,7 @@ using std::endl;
 using std::getline;
 using std::vector;
 using std::string;
+using std::pow;
 
 void namesMachOne()
 {
@@ -72,7 +73,7 @@ void namesMachThree()
 		getline(cin, pulled);
 		names.push_back(pulled);
 	} //inputs names into vectors
-	
+
 	for (int i = 0; i < 10; i++)
 	{
 		pulled = names.at(0); //pulls out names one by one
@@ -227,7 +228,7 @@ void namesMachThree()
 					finalstr.push_back('q');
 					break;
 				}
-				  break;
+				break;
 			case '1':
 				switch (tempstr.at(1))
 				{
@@ -247,7 +248,7 @@ void namesMachThree()
 					finalstr.push_back('r');
 					break;
 				}
-				  break;
+				break;
 			case '2':
 				switch (tempstr.at(1))
 				{
@@ -267,7 +268,7 @@ void namesMachThree()
 					finalstr.push_back('s');
 					break;
 				}
-				  break;
+				break;
 			case '3':
 				switch (tempstr.at(1))
 				{
@@ -287,7 +288,7 @@ void namesMachThree()
 					finalstr.push_back('t');
 					break;
 				}
-				  break;
+				break;
 			case '4':
 				switch (tempstr.at(1))
 				{
@@ -307,11 +308,11 @@ void namesMachThree()
 					finalstr.push_back('y');
 					break;
 				}
-				  break;
+				break;
 			}
 			tempstr.erase(0, 2);
 		}
-		
+
 		cout << finalstr << endl;
 		tempstr.clear();
 		finalstr.clear();
@@ -321,8 +322,10 @@ void namesMachThree()
 
 void moneyMath()
 {
-	int x = 0;
-	vector<int> money;
+	double x = 0;
+	double y = 0;
+	vector<double> money;
+	money.resize(5);
 
 	for (int i = 0; i < 5; i++)
 	{
@@ -347,11 +350,127 @@ void moneyMath()
 
 		cin >> x;
 		money.at(i) = x;
-		cout << money.at(i);
+		
 	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		x = money.at(i);
+
+		cout << "You have " << x;
+		
+		switch (i)
+		{
+		case 0:
+			y = y + x / 100.0;
+			if (x == 1)
+			{
+				cout << " penny." << endl;
+			}
+			else
+			{
+				cout << " pennies." << endl;
+			}
+			break;
+		case 1:
+			y = y + x * 5.0 / 100.0;
+			if (x == 1)
+			{
+				cout << " nickle." << endl;
+			}
+			else
+			{
+				cout << " nickles." << endl;
+			}
+			break;
+		case 2:
+			y = y + x * 10.0 / 100.0;
+			if (x == 1)
+			{
+				cout << " dime." << endl;
+			}
+			else
+			{
+				cout << " dimes." << endl;
+			}
+			break;
+		case 3:
+			y = y + x * 25.0 / 100.0;
+			if (x == 1)
+			{
+				cout << " quarter." << endl;
+			}
+			else
+			{
+				cout << " quarters." << endl;
+			}
+			break;
+		case 4:
+			y = y + x;
+			if (x == 1)
+			{
+				cout << " one-dollar coin." << endl;
+			}
+			else
+			{
+				cout << " one-dollar coins." << endl;
+			}
+			break;
+		}
+
+		
+	}
+	cout << "You have $" << y;
+}
+
+void rice()
+{
+	int x = 0;
+	int i = 1;
+	double z = 0.0; 
+
+	for (int y = 1; y <= 3; y++)
+	{
+		while (x < pow(1000,y))
+		{
+			x = x + pow(2, i);
+			i = i + 1;
+		}
+
+		cout << "It would take " << i << " squares to reach at least " << pow(1000,y) << " grains of rice" << endl;
+		x = 0;
+		i = 0;
+	}
+
+	while (x < 2147483647)
+	{
+		x = x + pow(2, i);
+		i = i + 1;
+	}
+	cout << "You could only account for " << i << " squares using an integer" << endl;
+	
+	i = 0;
+
+	while (i < 64)
+	{
+		z = z + pow(2, i);
+		i = i + 1;
+	}
+	cout << std::fixed << "You can account for all 64 squared using a double. As shown here: " << z;
+
 }
 
 int main()
 {
+	namesMachOne();
+
+	namesMachTwo();
+
+	namesMachThree();
+
 	moneyMath();
+
+	rice();
+
+	return 0;
 }

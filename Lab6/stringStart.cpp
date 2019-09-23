@@ -44,7 +44,8 @@ void additionalTwo()
 	cout << "Enter a string:";
 
 	getline(cin, userStr);
-	tempStr = userStr;
+	
+
 
 	int x = userStr.size();
 	tempStr.resize(x);
@@ -53,23 +54,18 @@ void additionalTwo()
 	{
 		tempStr.at(x - 1) = userStr.at(userStr.size() - x);
 		x = x - 1;
+		cout << userStr << endl;
+		cout << tempStr << endl;
 	}
 
-	cout << tempStr;
+	cout << tempStr << endl;
 }
 
 
 
 int main()
 {
-	required();
-
-	cout << endl;
-
-	additionalOne();
-
-	cout << endl;
-
+	
 	additionalTwo();
 
 	return 0;
