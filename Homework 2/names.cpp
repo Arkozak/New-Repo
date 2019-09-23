@@ -43,6 +43,8 @@ void namesMachOne()
 	cout << "The name is in the list " << count << " times";
 }
 
+
+
 void namesMachTwo()
 {
 	vector<string> names;
@@ -61,6 +63,8 @@ void namesMachTwo()
 	}
 
 }
+
+
 
 void namesMachThree()
 {
@@ -321,6 +325,8 @@ void namesMachThree()
 
 	}
 }
+
+
 
 int names()
 {
