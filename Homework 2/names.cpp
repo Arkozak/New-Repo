@@ -15,7 +15,7 @@ using std::getline;
 using std::vector;
 using std::string;
 
-void namesMachOne()
+void namesOne()
 {
 	vector<string> names;
 	string pulled;
@@ -45,7 +45,7 @@ void namesMachOne()
 
 
 
-void namesMachTwo()
+void namesTwo()
 {
 	vector<string> names;
 	string pulled;
@@ -66,7 +66,7 @@ void namesMachTwo()
 
 
 
-void namesMachThree()
+void namesThree()
 {
 	vector<string> names;
 	string pulled;
@@ -330,11 +330,11 @@ void namesMachThree()
 
 int names()
 {
-	namesMachOne();
+	namesOne();
 
-	namesMachTwo();
+	namesTwo();
 
-	namesMachThree();
+	namesThree();
 
 	return 0;
 }
