@@ -6,6 +6,8 @@ using std::cin;
 #include <string>
 using std::string;
 
+#include "boxer.hpp"
+
 int boxprint(string userInput, int x)
 {
 	int length = 0;
@@ -58,4 +60,5 @@ int boxprint(string userInput, int x)
 
 		}
 	}
+	return 0;
 }

@@ -1,8 +1,10 @@
-#pragma once
-#ifndef FILE_STUPIDTHING_HPP
-#define FILE_STUPIDTHING_HPP
-
 #include <string>
+
+#pragma once
+#ifndef FILE_BOXER_HPP
+#define FILE_BOXER_HPP
+
+
 
 int boxprint(std::string s, int y);
 
