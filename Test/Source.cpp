@@ -36,7 +36,7 @@ void shoop(vector<string> x)
 }
 
 
-int main()
+int plant()
 {
 	vector<string> green = boop();
 
