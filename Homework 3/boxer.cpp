@@ -1,4 +1,7 @@
-
+// Andrew Kozak
+// quad.cpp
+// 9/25/2019
+// This program create a box around a string.
 
 #include <iostream>
 using std::cout;
@@ -24,60 +27,9 @@ int boxer()
 	while (x < 0) //In case x is a negative number
 	{
 		cout << "X must be positive, please enter a new x value: ";
-		cin >> x;
 	}
 
-	length = x * 2 + userInput.size();
-
-	for (int i = 1; i < 4; i++)
-	{
-		if (i % 2 == 1) //Tells if it is the rows of *'s or the string 
-		{
-			for (int i = 0; i < x; i++) // Top and bottom rows of box
-			{
-				for (int i = 0; i < length; i++)
-				{
-					cout << "*";
-				}
-				cout << endl;
-			}
-		}
-
-		else //Tells if it is the rows of *'s or the string
-		{
-			for (int i = 0; i < 3; i++)
-			{
-				for (int i = 0; i < x; i++)
-				{
-					cout << "*";
-				}
-
-				if (i % 2 == 0)
-				{
-					for (int i = 0; i < userInput.size(); i++)
-					{
-						cout << " ";
-					}
-				}
-
-				else
-				{
-					cout << userInput; 
-				}
-
-				for (int i = 0; i < x; i++)
-				{
-					cout << "*";
-				}
-
-				cout << endl;
-			}
-			
-		}
-	}
-
-
-
+	boxprint(userInput, x);
 
 	return 0;
 

@@ -1,11 +1,14 @@
-
+// Andrew Kozak
+// quad.cpp
+// 9/25/2019
+// This program does the collatz formula.
 
 #include <iostream>
 using std::cout;
 using std::cin;
 using std::endl;
 
-int main()
+int collatz()
 {
 	int x = 0;
 
