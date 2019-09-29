@@ -1,3 +1,8 @@
+// Andrew Kozak
+// quad.cpp
+// 9/23/2019
+// This program create a box around a string.
+
 #include <iostream>
 using std::cout;
 using std::endl;
