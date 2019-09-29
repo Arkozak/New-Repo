@@ -3,6 +3,8 @@
 // 9/25/2019
 // This program create a box around a string.
 
+#include "boxer.hpp"
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -12,7 +14,7 @@ using std::cin;
 using std::string;
 using std::getline;
 
-int boxer()
+int main()
 {
 
 	string userInput; //Initializing the variables
