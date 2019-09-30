@@ -15,28 +15,28 @@ using std::vector;
 
 void getUserStrings(vector<string>& words)
 {
-	int x = 0;
-	string tempStr;
-	string userStr;
-	string tempStr2;
+	string userstr;
+	getline(cin, userstr);
+	string word;
 
-	getline(cin, userStr);
-	x = userStr.size();
-	tempStr2 = userStr;
-
-	for (int i = 0; i < x; i++)
+	for (int i = 0; i < userstr.size(); i++)
 	{
-		if (userStr[i] == ' ')
+		if (word == "end")
 		{
-			for (int y = 0; y < i; y++)
-			{
-				tempStr.push_back(tempStr2[i]);
-			}
-			//FIX ME
+			i = userstr.size();
+			word.clear();
 		}
-		
-		words.push_back(tempStr);
-		tempStr.clear();
+		else if (userstr[i] == ' ')
+		{
+			words.push_back(word);
+			word = "";
+		}
+		else
+		{
+			word.push_back(userstr[i]);
+		}
 	}
-	
+	words.push_back(word);
+
 }
+
