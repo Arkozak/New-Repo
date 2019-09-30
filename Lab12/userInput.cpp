@@ -18,22 +18,24 @@ void getUserStrings(vector<string>& words)
 	int x = 0;
 	string tempStr;
 	string userStr;
-	vector<string> filler;
+	string tempStr2;
 
 	getline(cin, userStr);
 	x = userStr.size();
-	
+	tempStr2 = userStr;
+
 	for (int i = 0; i < x; i++)
 	{
 		if (userStr[i] == ' ')
 		{
 			for (int y = 0; y < i; y++)
 			{
-				tempStr.push_back(userStr[y]);
+				tempStr.push_back(tempStr2[i]);
 			}
-			userStr.erase(userStr.begin(), userStr.begin() + i);
+			//FIX ME
 		}
-		filler.push_back(tempStr);
+		
+		words.push_back(tempStr);
 		tempStr.clear();
 	}
 	
