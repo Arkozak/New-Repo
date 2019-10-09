@@ -7,24 +7,35 @@ using std::endl;
 #include <string>
 using std::string;
 #include <sstream>
-using std::stringstream;
+using std::istringstream;
 #include "reading.hpp"
 
 
 int output(string userStr)
 {
 	
-	int x;
-	stringstream numberfinder(userStr);
-	numberfinder >> x;
-	if (!numberfinder) 
+	int x = 0;
+	string boop;
+	istringstream instream(userStr);
+	
+	
+	if (isdigit(userStr.at(0)))
 	{
-		cout << "No, you idiot! text needs an int!";
+		instream >> x;
+		
 	}
 	else
 	{
-		cout << "num is " << x << endl ;
+		instream >> boop >> x;
 	}
+
+	cout << "num is " << x << endl;
+
+
+	
+	
+
+
 
 	return x;
 }

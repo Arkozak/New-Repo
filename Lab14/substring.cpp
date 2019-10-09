@@ -11,28 +11,24 @@ using std::cin;
 #include <string>
 using std::string;
 using std::getline;
+#include <sstream>
+using std::istringstream;
 
 
 
 int main()
 {
+	cout << "Type an integer: ";
+	string line;
 	string boop;
-	string loop; 
-	int x = 0;
-	int y = 0;
-
-	cout << "Enter a string: ";
-	cin >> boop;
-	y = boop.size();
-
-	for (int i = 0; i < y; i++)
+	getline(cin, line); // Input a line
+	istringstream instream(line);
+	int num;
+	instream >> boop >> num; // Read number from line
+	if (!instream) // Error check
 	{
-		loop.push_back(' ');
-	}
+		cout << "No, you idiot! Type an INTEGER!";
 
-	for (int i = 0; i <= y/2; i++)
-	{
-		cout << loop.substr(0, i);
-		cout << boop.substr(i, y - 2 * i) << endl;
 	}
+	cout << num;
 }

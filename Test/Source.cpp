@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <sstream>
+using std::stringstream;
 using std::string;
 using std::vector;
 using std::cout;
@@ -44,3 +45,4 @@ int plant()
 	shoop(boop());
 	return 0;
 }
+
