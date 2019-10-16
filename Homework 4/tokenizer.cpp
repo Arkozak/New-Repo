@@ -2,7 +2,7 @@
 
 #include "tokenizer.hpp"
 
-int main()
+int tokenizer()
 {
 	vector<string> tokens;
 	string str;

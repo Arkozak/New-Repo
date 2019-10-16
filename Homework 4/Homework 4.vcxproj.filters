@@ -26,5 +26,8 @@
     <ClCompile Include="tokenizertest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bullcow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
