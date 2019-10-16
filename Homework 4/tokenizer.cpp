@@ -9,9 +9,9 @@ int main()
 	int x = 0;
 
 	cout << "Please enter some text.";
-	cout << "To end type end." << endl;
+	cout << " To end type end." << endl;
 	
-	while (str != "end" && str != "END" && str != "End")
+	while (str != "end" && str != "END" && str != "End") //Grabing inputs
 	{
 		if (ReadLine(str) == true)
 		{
@@ -20,5 +20,9 @@ int main()
 		}
 	}
 	
-	
+	x = StringToTokensWS(tokens); //Fixing vector to seperate everything
+
+	AnalyzeTokens(tokens); //outputing everything and identifying stuff
+
+	return; 
 }

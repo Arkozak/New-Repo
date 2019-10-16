@@ -17,6 +17,8 @@ using std::vector;
 
 bool ReadLine(string & str);
 unsigned StringToTokensWS(vector<string>& tokens);
+void AnalyzeTokens(const vector<string>& tokens);
+
 
 
 
