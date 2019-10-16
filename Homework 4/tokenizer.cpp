@@ -24,5 +24,5 @@ int main()
 
 	AnalyzeTokens(tokens); //outputing everything and identifying stuff
 
-	return; 
+	return 0; 
 }

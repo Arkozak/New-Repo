@@ -76,6 +76,10 @@ void AnalyzeTokens(const vector<string>& tokens)
 			{
 				cout << "[integer] \t \"" << temp << "\"" << endl;
 			}
+			else
+			{
+				cout << "[other] \t \"" << temp << "\"" << endl;
+			}
 				
 		}
 		else if (islower(temp[0]))										
@@ -91,6 +95,10 @@ void AnalyzeTokens(const vector<string>& tokens)
 			if (x == temp.size())
 			{
 				cout << "[identifier] \t \"" << temp << "\"" << endl;
+			}
+			else
+			{
+				cout << "[other] \t \"" << temp << "\"" << endl;
 			}
 
 		}
