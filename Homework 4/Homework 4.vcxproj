@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bullcow.cpp" />
+    <ClCompile Include="fifo-lofo.cpp" />
     <ClCompile Include="tokenizer.cpp" />
     <ClCompile Include="tokenizertest.cpp" />
   </ItemGroup>
