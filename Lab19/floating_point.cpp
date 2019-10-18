@@ -19,10 +19,9 @@ std::vector<double> degreesToRadians(int degrees) {
 
 	// for each degree, fill the vector with its radian
 	for (int degree = 0; degree <= degrees; ++degree) {
-		// TODO: calculate a radian and add it to the vector****************
+		
+		radians.push_back(degree * M_PI / 180.0);
 
-
-		// *****************************************************************
 	}
 	return radians;
 }
