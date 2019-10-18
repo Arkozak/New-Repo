@@ -1,6 +1,6 @@
 // Andrew Kozak
 // quad.cpp
-// 9/25/2019
+// 9/23/2019
 // This program create a box around a string.
 
 #include "boxer.hpp"
