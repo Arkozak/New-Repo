@@ -126,10 +126,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bullcow.cpp" />
+    <ClCompile Include="Bullcowtextbox.cpp" />
     <ClCompile Include="truncoutput.cpp" />
     <ClCompile Include="trucnstruct.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bullcow.hpp" />
     <ClInclude Include="truncstruct.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

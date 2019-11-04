@@ -27,10 +27,19 @@
     <ClCompile Include="truncoutput.cpp">
       <Filter>Main Program</Filter>
     </ClCompile>
+    <ClCompile Include="Bullcowtextbox.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
+    <ClCompile Include="bullcow.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="truncstruct.hpp">
       <Filter>Main Program</Filter>
+    </ClInclude>
+    <ClInclude Include="bullcow.hpp">
+      <Filter>Additional</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
