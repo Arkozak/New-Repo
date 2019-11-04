@@ -126,7 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="fltk-example.cpp" />
+    <ClCompile Include="truncoutput.cpp" />
     <ClCompile Include="trucnstruct.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,4 @@
 #include "truncstruct.hpp"
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::cin;
-#include <string>
-using std::string;
-using std::getline;
-#include <cctype>
-using std::toupper;
-
 
 StringInfo trunc(const StringInfo& stringInfo) {
 	// Get input string & maxlen
