@@ -13,24 +13,13 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Main Program">
-      <UniqueIdentifier>{fb66f1db-9bc0-46c2-8ff7-b78a135e3a17}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Additional">
-      <UniqueIdentifier>{9f221f69-db46-4f59-8087-8555c3d081f3}</UniqueIdentifier>
+    <Filter Include="Additional 1">
+      <UniqueIdentifier>{77b8a5bc-6d6b-420b-b7c3-f2d28161fbe8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="trucnstruct.cpp">
-      <Filter>Main Program</Filter>
+    <ClCompile Include="Source.cpp">
+      <Filter>Additional 1</Filter>
     </ClCompile>
-    <ClCompile Include="truncoutput.cpp">
-      <Filter>Main Program</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="truncstruct.hpp">
-      <Filter>Main Program</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

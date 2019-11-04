@@ -1,12 +1,3 @@
-// FLTK Input and Output Example
-// by Jonathan Metzgar
-// CC-By-Attribution License
-//
-// This program will initialize a Fl_Input widget and a Fl_Output widget
-// The program also creates two buttons: one to quit the program and one to
-// process the data. The Model-View-Controller pattern is used to separate
-// data from the GUI.
-
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
@@ -17,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include <map>
-
+#include <vector>
 
 //////////////////////////////////////////////////////////////////////
 // E X T E R N A L   L I B R A R I E S ///////////////////////////////
@@ -115,8 +106,84 @@ void OnQuitClicked(Fl_Widget* w, void* userdata) {
 
 // TransformData(input, output) simply adds " transformed" to the input
 // string
-void TransformData(const std::string& input, std::string& output) {
-	output = input + " transformed!";
+void generate(std::vector<int>& hidden)
+{
+	std::vector<int>hidden;
+	for (auto i = 0; i < 4; i++) //Creating hidden vector
+	{
+		hidden.push_back(rand() % 10);
+
+	}
+}
+
+void TransformData(const std::string& input, std::string& output, const std::vector<int>& hidden) {
+	
+	int x = 0;
+	int bulls = 0;
+	int cows = 0;
+
+	for (auto i = 0; i < 4; i++)
+	{
+		switch (input[i]) //first number
+		{
+		case '0':
+			x = 0;
+			break;
+		case '1':
+			x = 1;
+			break;
+		case '2':
+			x = 2;
+			break;
+		case '3':
+			x = 3;
+			break;
+		case '4':
+			x = 4;
+			break;
+		case '5':
+			x = 5;
+			break;
+		case '6':
+			x = 6;
+			break;
+		case '7':
+			x = 7;
+			break;
+		case '8':
+			x = 8;
+			break;
+		case '9':
+			x = 9;
+			break;
+		}
+
+		for (auto j = 0; j < 4; j++)
+		{
+			if (x == hidden[j])
+			{
+				if (i == j)
+				{
+					bulls++;
+				}
+				else
+				{
+					cows++;
+				}
+			}
+		}
+	}
+
+	if (bulls == 4)
+	{
+		output = "You win!";
+	}
+	else
+	{
+		output = "Bulls:" + std::to_string(bulls) + " Cows:" + std::to_string(cows);
+	}
+
+	
 }
 
 
@@ -135,7 +202,7 @@ Fl_Window* CreateWindow() {
 	const int h = 25;
 	const int Spacing = 10;
 
-	view.input = new Fl_Input(x, y, 2 * w, h, "Input");
+	view.input = new Fl_Input(x, y, 2 * w, h, "Guess a 4 digit number : ");
 	y += h + Spacing;
 	view.output = new Fl_Output(x, y, 2 * w, h, "Output");
 	y += h + Spacing;
@@ -155,6 +222,8 @@ Fl_Window* CreateWindow() {
 
 
 int main(int argc, char** argv) {
+	std::vector<int>hidden;
+	generate(hidden);
 	Fl_Window* window = CreateWindow();
 	window->show(argc, argv);
 	return Fl::run();
