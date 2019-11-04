@@ -46,3 +46,44 @@ int plant()
 	return 0;
 }
 
+#ifndef MAIN_HPP_
+#define MAIN_HPP_
+
+#include <string>
+
+struct Account
+{
+	std::string account;
+	std::string accountPassword;
+};
+
+bool entrancekey(std::string password);
+
+std::string asking(std::string password);
+
+
+
+
+
+
+#endif MAIN_HPP_
+
+
+#include "Main.hpp"
+#include <iostream>
+#include <string>
+
+std::string asking(std::string password)
+{
+	std::cout << "Enter account that you would like the password to: ";
+}
+
+bool entrancekey(std::string password)
+{
+	if (password == "") //FIX ME
+	{
+		return 1;
+	}
+
+	return 0;
+}
