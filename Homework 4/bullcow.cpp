@@ -8,7 +8,7 @@ using std::string;
 #include <vector>
 using std::vector;
 
-int bullcow()
+int main()
 {
 	vector<int> hidden;
 	string guess;
