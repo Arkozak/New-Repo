@@ -13,33 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="fifolofo">
-      <UniqueIdentifier>{654a1d4b-3b65-4691-863d-8f95493a7030}</UniqueIdentifier>
+    <Filter Include="Main Program">
+      <UniqueIdentifier>{fb66f1db-9bc0-46c2-8ff7-b78a135e3a17}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main such">
-      <UniqueIdentifier>{906a7d09-e9e9-453b-b654-db76c0dc12b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bullcow">
-      <UniqueIdentifier>{ee873a21-218a-417f-b835-d9c0bbbf22d1}</UniqueIdentifier>
+    <Filter Include="Additional">
+      <UniqueIdentifier>{9f221f69-db46-4f59-8087-8555c3d081f3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fifo-lofo.cpp">
-      <Filter>fifolofo</Filter>
+    <ClCompile Include="trucnstruct.cpp">
+      <Filter>Main Program</Filter>
     </ClCompile>
-    <ClCompile Include="tokenizertest.cpp">
-      <Filter>main such</Filter>
-    </ClCompile>
-    <ClCompile Include="tokenizer.cpp">
-      <Filter>main such</Filter>
-    </ClCompile>
-    <ClCompile Include="bullcow.cpp">
-      <Filter>bullcow</Filter>
+    <ClCompile Include="truncoutput.cpp">
+      <Filter>Main Program</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tokenizer.hpp">
-      <Filter>main such</Filter>
+    <ClInclude Include="truncstruct.hpp">
+      <Filter>Main Program</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

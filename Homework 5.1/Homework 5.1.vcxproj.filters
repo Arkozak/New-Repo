@@ -13,33 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="fifolofo">
-      <UniqueIdentifier>{654a1d4b-3b65-4691-863d-8f95493a7030}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main such">
-      <UniqueIdentifier>{906a7d09-e9e9-453b-b654-db76c0dc12b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bullcow">
-      <UniqueIdentifier>{ee873a21-218a-417f-b835-d9c0bbbf22d1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fifo-lofo.cpp">
-      <Filter>fifolofo</Filter>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tokenizertest.cpp">
-      <Filter>main such</Filter>
-    </ClCompile>
-    <ClCompile Include="tokenizer.cpp">
-      <Filter>main such</Filter>
-    </ClCompile>
-    <ClCompile Include="bullcow.cpp">
-      <Filter>bullcow</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="tokenizer.hpp">
-      <Filter>main such</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
