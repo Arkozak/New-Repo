@@ -18,5 +18,13 @@
     <ClCompile Include="fltk-example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="trucnstruct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="truncstruct.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

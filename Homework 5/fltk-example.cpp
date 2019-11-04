@@ -2,6 +2,8 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Button.H>
+#include <Fl_Int_Input.H>
+#include "truncstruct.hpp"
 
 #pragma comment(lib, "fltk.lib")
 #pragma comment(lib, "comctl32.lib")
@@ -12,17 +14,14 @@ void OnCloseCallback(Fl_Widget* w, void* data) {
 }
 
 int main(int argc, char** argv) {
-	Fl_Window* window = new Fl_Window(340, 240);
+	Fl_Window* window = new Fl_Window(200, 140);
 
-	Fl_Box* box = new Fl_Box(20, 40, 300, 100, "Hello, World!");
-	box->box(FL_UP_BOX);
-	box->labelfont(FL_BOLD + FL_ITALIC);
-	box->labelsize(36);
-	box->labeltype(FL_SHADOW_LABEL);
+	Fl_Int_Input* input = new Fl_Int_Input(125, 20, 50, 25, "Enter A Value");
 
-	const int ControlHeight = 25;
+	Fl_Button* trunc = new Fl_Button(50, 60, 100, 25, "Truncate");
+	trunc->callback(trunc8, (void*)window);
 
-	Fl_Button* closeBtn = new Fl_Button(20, 160, 300, ControlHeight, "Close Window");
+	Fl_Button* closeBtn = new Fl_Button(50, 100, 100, 25, "Close Window");
 	closeBtn->callback(OnCloseCallback, (void*)window);
 
 	window->end();
