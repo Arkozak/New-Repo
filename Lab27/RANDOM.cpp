@@ -27,7 +27,7 @@ int main()
 			tails++;
 		}
 	}
-	std::cout << "Heads: " << heads << std::endl;
-	std::cout << "Tails: " << tails;
+	std::cout << "Heads: 500" << heads << std::endl;
+	std::cout << "Tails: 500" << tails;
 
 }
