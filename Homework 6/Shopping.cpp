@@ -28,36 +28,72 @@ void viewcart(const map<string, int>& shoppingcart)
 
 void additem(map<string, int>& shoppingcart, map<string, item>& products)
 {
-	item filler;
 	string userin;
 	cout << "What item would you like to add to cart? ";
-	getline(cin, userin);
+	cin >> userin;
 
 	if (products.find(userin) != products.end()) {
 		
-		products[userin].units--;
-
-		if (shoppingcart.find(userin) != shoppingcart.end()) {
-
-			shoppingcart[userin]++;
+		if (products[userin].units <= 0)
+		{
+			cout << "There is no more " << userin << "\n";
 		}
-		else {
-			shoppingcart.insert({ userin,1 });
-		}
+		else
+		{
+			products[userin].units--;
 
+			if (shoppingcart.find(userin) != shoppingcart.end()) {
+
+				shoppingcart[userin]++;
+			}
+			else {
+				shoppingcart.insert({ userin,1 });
+			}
+		}
 	}
 	else 
 	{
 		cout << "Item not found\n";
 	}
-	
-	
+}
+
+void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
+{
+	string userin;
+	cout << "What item would you like to remove from cart? ";
+	cin >> userin;
+
+	if (shoppingcart.find(userin) != shoppingcart.end()) {
+
+		if (shoppingcart[userin] <= 0)
+		{
+			cout << "There is no " << userin << " in your cart.\n";
+		}
+		else
+		{
+			shoppingcart[userin]--;
+
+			if (products.find(userin) != products.end()) {
+
+				products[userin].units++;
+			}
+		}
+	}
+	else
+	{
+		cout << "There is no " << userin << " in your cart.\n";
+	}
+}
+
+void pay(const map<string, int>& shoppingcart, const map<string, item>& products)
+{
+
 }
 
 int main()
 {
 	int x = 0;
-	int units = 6;
+	int units = 1;
 	
 	std::map<std::string, item> products
 	{
@@ -84,7 +120,19 @@ int main()
 		{
 			additem(shoppingcart, products);
 		}
-		
+		else if (x == 2)
+		{
+			removeitem(shoppingcart, products);
+		}
+		else if (x == 3)
+		{
+			pay(shoppingcart, products);
+		}
+		else if (x == 4)
+		{
+			cout << "Bye.";
+			return 0;
+		}
 		else
 		{
 			cout << "Input invalid\n";

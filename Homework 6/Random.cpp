@@ -81,5 +81,5 @@ int second()
 	}
 	PrintDistribution(numbers);
 
-	
+	return 0;
 }
