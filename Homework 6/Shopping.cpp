@@ -1,8 +1,17 @@
+/*
+Andrew Kozak
+SHopping.cpp
+11/17/2019
+CS201
+This program was created to mimic a shopping expirience
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <map>
 #include <iomanip>
 #include <string>
+#include <numeric>
 
 using std::cout;
 using std::map;
@@ -11,12 +20,14 @@ using std::getline;
 using std::string;
 using std::cin;
 
+//item cost and amount 
 struct item
 {
 	double cost;
 	int units;
 };
 
+//this function allows you to view your cart
 void viewcart(const map<string, int>& shoppingcart)
 {
 	cout << "You have: \n";
@@ -26,6 +37,7 @@ void viewcart(const map<string, int>& shoppingcart)
 	}
 }
 
+//this funciton allows you to add an item to the cart
 void additem(map<string, int>& shoppingcart, map<string, item>& products)
 {
 	string userin;
@@ -57,6 +69,7 @@ void additem(map<string, int>& shoppingcart, map<string, item>& products)
 	}
 }
 
+//this function allows you to remove an item from the cart
 void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
 {
 	string userin;
@@ -85,6 +98,7 @@ void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
 	}
 }
 
+//this item allows you to view the total cost of your cart
 void totcost(const map<string, int>& shoppingcart,  map<string, item>& products)
 {
 	double x = 0;
@@ -97,18 +111,19 @@ void totcost(const map<string, int>& shoppingcart,  map<string, item>& products)
 	cout << "Your total cost is: " << std::setprecision(2) << std::fixed << x << "\n";
 }
 
+//this item allows you to view what is being sold
 void show(const map<string, item>& products)
 {
 	for (auto i : products)
 	{
-		cout << i.first << " cost " << i.second.cost << " amount left: " << i.second.units << "\n";
+		cout << i.first << " cost $" << std::setprecision(2) << std::fixed << i.second.cost << ", amount left: " << i.second.units << "\n";
 	}
 }
 
 int main()
 {
 	int x = 0;
-	int units = 7;
+	int units = 10;
 	
 	std::map<std::string, item> products
 	{
