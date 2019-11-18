@@ -35,7 +35,12 @@ int RandomBetweenN(int first, int last)
 	return x;
 }
 
-
+//Generates a random number using rand()
+int RandomBetween(int first, int last)
+{
+	int x = (rand() % (last - first + 1) + first);
+	return x;
+}
 
 //Outputs the histogram
 void PrintDistribution(const std::map<int,int> &numbers)
@@ -69,7 +74,12 @@ int main()
 	}
 	PrintDistribution(numbersN);
 
-	
+	std::cout << "Random Distribution between " << x << " & " << y << "\n";
+	std::map<int, int> numbers;
+	for (int n = 0; n < 10000; ++n) {
+		++numbers[RandomBetween(x, y)];
+	}
+	PrintDistribution(numbers);
 
 	
 }
