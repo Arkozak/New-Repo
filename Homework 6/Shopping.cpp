@@ -26,10 +26,39 @@ void viewcart(const map<string, int>& shoppingcart)
 	}
 }
 
+void additem(map<string, int>& shoppingcart, map<string, item>& products)
+{
+	item filler;
+	string userin;
+	cout << "What item would you like to add to cart? ";
+	getline(cin, userin);
+
+	if (products.find(userin) != products.end()) {
+		
+		products[userin].units--;
+
+		if (shoppingcart.find(userin) != shoppingcart.end()) {
+
+			shoppingcart[userin]++;
+		}
+		else {
+			shoppingcart.insert({ userin,1 });
+		}
+
+	}
+	else 
+	{
+		cout << "Item not found\n";
+	}
+	
+	
+}
+
 int main()
 {
 	int x = 0;
 	int units = 6;
+	
 	std::map<std::string, item> products
 	{
 		{"Milk", {4.30, units}},
@@ -53,20 +82,9 @@ int main()
 		}
 		else if (x == 1)
 		{
-			
+			additem(shoppingcart, products);
 		}
-		else if (x == 2)
-		{
-
-		}
-		else if (x == 3)
-		{
-
-		}
-		else if (x == 4)
-		{
-
-		}
+		
 		else
 		{
 			cout << "Input invalid\n";
