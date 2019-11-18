@@ -23,6 +23,18 @@ int RandomBetweenU(int first, int last)
 	return x(e1);
 }
 
+//Generates a random number using normal distribution
+int RandomBetweenN(int first, int last) 
+{
+	std::random_device r;
+	int mean = (first + last) / 2;
+	std::seed_seq seed2{ r(), r(), r(), r(), r(), r(), r(), r() };
+	std::mt19937 e2(seed2);
+	std::normal_distribution<> normal_dist(mean, 2);
+	int x = std::round(normal_dist(e2));
+	return x;
+}
+
 
 
 //Outputs the histogram
@@ -50,6 +62,14 @@ int main()
 	}
 	PrintDistribution(numbersU);
 
+	std::cout << "Normal Distribution between " << x << " & " << y << "\n";
+	std::map<int, int> numbersN;
+	for (int n = 0; n < 10000; ++n) {
+		++numbersN[RandomBetweenN(x, y)];
+	}
+	PrintDistribution(numbersN);
+
 	
+
 	
 }
