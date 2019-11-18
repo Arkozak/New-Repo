@@ -28,17 +28,17 @@ struct item
 };
 
 //this function allows you to view your cart
-void viewcart(const map<string, int>& shoppingcart)
+void viewcart(const map<string, item>& shoppingcart)
 {
 	cout << "You have: \n";
 	for (auto i : shoppingcart)
 	{
-		cout << i.second << " " << i.first << "\n";
+		cout << i.second.units << " " << i.first << "\n";
 	}
 }
 
 //this funciton allows you to add an item to the cart
-void additem(map<string, int>& shoppingcart, map<string, item>& products)
+void additem(map<string, item>& shoppingcart, map<string, item>& products)
 {
 	string userin;
 	cout << "What item would you like to add to cart? ";
@@ -56,10 +56,10 @@ void additem(map<string, int>& shoppingcart, map<string, item>& products)
 
 			if (shoppingcart.find(userin) != shoppingcart.end()) {
 
-				shoppingcart[userin]++;
+				shoppingcart[userin].units++;
 			}
 			else {
-				shoppingcart.insert({ userin,1 });
+				shoppingcart.insert({ userin,{products[userin].cost, 1}});
 			}
 		}
 	}
@@ -70,7 +70,7 @@ void additem(map<string, int>& shoppingcart, map<string, item>& products)
 }
 
 //this function allows you to remove an item from the cart
-void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
+void removeitem(map<string, item>& shoppingcart, map<string, item>& products)
 {
 	string userin;
 	cout << "What item would you like to remove from cart? ";
@@ -78,13 +78,13 @@ void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
 
 	if (shoppingcart.find(userin) != shoppingcart.end()) {
 
-		if (shoppingcart[userin] <= 0)
+		if (shoppingcart[userin].units <= 0)
 		{
 			cout << "There is no " << userin << " in your cart.\n";
 		}
 		else
 		{
-			shoppingcart[userin]--;
+			shoppingcart[userin].units--;
 
 			if (products.find(userin) != products.end()) {
 
@@ -99,16 +99,23 @@ void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
 }
 
 //this item allows you to view the total cost of your cart
-void totcost(const map<string, int>& shoppingcart,  map<string, item>& products)
+void totcost(const map<string, item>& shoppingcart, map<string, item>& products)
 {
-	double x = 0;
-	string filler;
-	for (auto i : shoppingcart)
-	{
-		filler = i.first;
-		x = x + i.second * products[filler].cost;
-	}
-	cout << "Your total cost is: " << std::setprecision(2) << std::fixed << x << "\n";
+	/*double x = std::accumulate(std::begin(shoppingcart), std::end(shoppingcart), 0.0,
+		[](const double &value, const std::map<std::string, item>::value_type& p)
+		{ return value + p.second.cost; }
+	);
+		*/
+	double x = std::accumulate(std::begin(shoppingcart),
+		std::end(shoppingcart),
+		0.0,
+		[](const double& value, const std::map<std::string, item>::value_type& p) {
+			return value + p.second.units * p.second.cost;
+		}
+	);
+
+	std::cout << x << std::endl;
+	
 }
 
 //this item allows you to view what is being sold
@@ -134,7 +141,7 @@ int main()
 		{"Goldfish", {5.00, units}}
 	};
 
-	map<string, int> shoppingcart;
+	map<string, item> shoppingcart;
 	
 	while (x != 5)
 	{
