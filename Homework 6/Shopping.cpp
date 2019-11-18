@@ -17,6 +17,15 @@ struct item
 	int units;
 };
 
+void viewcart(const map<string, int>& shoppingcart)
+{
+	cout << "You have: \n";
+	for (auto i : shoppingcart)
+	{
+		cout << i.second << " " << i.first << "\n";
+	}
+}
+
 int main()
 {
 	int x = 0;
@@ -40,11 +49,11 @@ int main()
 		
 		if (x == 0)
 		{
-		
+			viewcart(shoppingcart);
 		}
 		else if (x == 1)
 		{
-
+			
 		}
 		else if (x == 2)
 		{
