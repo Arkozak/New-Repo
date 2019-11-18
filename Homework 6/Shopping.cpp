@@ -85,31 +85,46 @@ void removeitem(map<string, int>& shoppingcart, map<string, item>& products)
 	}
 }
 
-void pay(const map<string, int>& shoppingcart, const map<string, item>& products)
+void totcost(const map<string, int>& shoppingcart,  map<string, item>& products)
 {
+	double x = 0;
+	string filler;
+	for (auto i : shoppingcart)
+	{
+		filler = i.first;
+		x = x + i.second * products[filler].cost;
+	}
+	cout << "Your total cost is: " << std::setprecision(2) << std::fixed << x << "\n";
+}
 
+void show(const map<string, item>& products)
+{
+	for (auto i : products)
+	{
+		cout << i.first << " cost " << i.second.cost << " amount left: " << i.second.units << "\n";
+	}
 }
 
 int main()
 {
 	int x = 0;
-	int units = 1;
+	int units = 7;
 	
 	std::map<std::string, item> products
 	{
 		{"Milk", {4.30, units}},
-		{"Tea", {4.30, units}},
-		{"Onion", {4.30, units}},
-		{"Chocolate", {4.30, units}},
-		{"Goldfish", {4.30, units}}
+		{"Tea", {2.40, units}},
+		{"Onion", {0.99, units}},
+		{"Chocolate", {1.30, units}},
+		{"Goldfish", {5.00, units}}
 	};
 
 	map<string, int> shoppingcart;
 	
-	while (x != 4)
+	while (x != 5)
 	{
 		cout << "Would you like to view cart(0), ";
-		cout << "add item(1), remove item(2), pay(3), or exit(4) ";
+		cout << "add item(1), remove item(2), view cost(3), \nview products for sale (4) or exit(5) ";
 		cin >> x;
 		
 		if (x == 0)
@@ -126,9 +141,13 @@ int main()
 		}
 		else if (x == 3)
 		{
-			pay(shoppingcart, products);
+			totcost(shoppingcart, products);
 		}
 		else if (x == 4)
+		{
+			show(products);
+		}
+		else if (x == 5)
 		{
 			cout << "Bye.";
 			return 0;
@@ -137,5 +156,6 @@ int main()
 		{
 			cout << "Input invalid\n";
 		}
+		cout << "\n";
 	}
 }
