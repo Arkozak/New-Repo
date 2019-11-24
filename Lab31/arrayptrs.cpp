@@ -27,15 +27,15 @@ void printPointerStuff(int* ip1, int* ip2) {
 	cout << "Distance from ip1 to ip2: ";
 
 	// TODO: REQUIRED. Print the distance between two array pointers. *******
-	auto dist = *ip2 - *ip1;  // DUMMY
+	auto dist = ip2 - ip1;  // DUMMY
 	cout << dist << std::endl;
 	// **********************************************************************
 
 	cout << "Item halfway between those pointed to by ip1, ip2: ";
 
 	// TODO: REQUIRED. Print the value at the "middle" of the array. ********
-	int middle = *ip1 + ((*ip2 - *ip1)/2) ;    // DUMMY
-	cout << middle;
+	int *middle = ip1 + ((ip2 - ip1)/2) ;    // DUMMY
+	cout << *middle;
 	// **********************************************************************
 
 	// TODO: ADDITIONAL. Print the entire array with a newline every 10 *****
