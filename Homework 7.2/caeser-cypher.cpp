@@ -10,7 +10,11 @@ using std::stringstream;
 
 bool isNumber(string filler)
 {
-	for (int i = 0; i < filler.size(); i++)
+	if ((filler[0] != '-') && (isdigit(filler[0]) == false))
+	{
+		return false;
+	}
+	for (int i = 1; i < filler.size(); i++)
 	{
 		if (isdigit(filler[i]) == false)
 		{
@@ -26,8 +30,9 @@ int main()
 {
 	string userin = " ";
 	string filler;
+	int x;
 	int shift = 0;
-	char ch;
+	
 	cout << "Caesar Cypher\n\n";
 
 	while (userin != "")
@@ -56,10 +61,47 @@ int main()
 		}
 
 		
+		for (int i = 0; i < userin.size(); i++)
+		{
+			x = userin[i];
+			if (isupper(userin[i]))
+			{
+				x = x + shift;
+				if (x > 90)
+				{
+					userin[i] = x - 26;
+				}
+				else if (x < 65)
+				{
+					userin[i] = 154 - x;
+				}
+				else
+				{
+					userin[i] = x;
+				}
+			}
+			if (islower(userin[i]))
+			{
+				x = x + shift;
+				if (x > 122)
+				{
+					userin[i] = x - 26;
+				}
+				else if (x < 97)
+				{
+					userin[i] = 218 - x ;
+				}
+				else
+				{
+					userin[i] = x;
+				}
+			}
+		}
 		
-		cout << "Result: " << userin << "\n\n";
 		
-
+		cout << "Result: " << userin << "\n\n" << x;
+		
+		shift = 0;
 
 	}
 }
