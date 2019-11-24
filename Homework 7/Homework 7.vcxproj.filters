@@ -15,14 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Random.cpp">
+    <ClCompile Include="asciiart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shopping.cpp">
+    <ClCompile Include="Color3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hangman.cpp">
+    <ClCompile Include="Image3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Color3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Image3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

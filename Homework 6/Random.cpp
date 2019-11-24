@@ -52,7 +52,7 @@ void PrintDistribution(const std::map<int,int> &numbers)
 	std::cout << "\n\n";
 }
 
-int second()
+int boop()
 {
 	int x, y;
 	std::cout << "Enter the lowest number you want to get: ";
