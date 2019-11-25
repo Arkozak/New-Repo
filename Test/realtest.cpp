@@ -9,20 +9,22 @@ using std::vector;
 
 int main()
 {
-	cout << "Enter x: ";
-	int x=0;
-
-	while (x != 100)
-	{
-		if (x == 7 || x == 6)
+	string userinput;
+	
+	
+		//FIXME
+		cin >> userinput;
+		if (userinput == "Yes")
 		{
-			return 0;
+
+			cout << "Adding password to database.\n";
+		}
+		else if (userinput == "no" || userinput == "No")
+		{
+			cout << "Taking you back to main page.\n";
 		}
 		else
 		{
-			cout << "Wrong:";
-			cin >> x;
+			cout << "Please enter yes or no.";
 		}
-	}
-	return 0;
 }
