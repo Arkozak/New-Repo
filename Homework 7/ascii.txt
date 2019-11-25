@@ -1,0 +1,80 @@
+  ..        .     ..  ..=lDhol=-....        -=-.... .=+=-.=-=ii+.      iii=...  
+  ..               . =B @H@. .. @H+==    =lHHBh-=..=i.-..=+=--=..      -oo-.-   
+   .             .-iB @HB    @ . @.. BH ........ BHDD....-i+-  ..     -...  ..--
+                -bDBB@BBB   BBBB .........  .... ...@iho.-+-.  ..     .-  -  .==
+              .lhbOHHOHBBBBBB@@    ..   ......   .. @  .H-.=-  ...     -=.-  ---
+             =lllhbbbODHDBHHHB@  .... ..... @  .    @BHBB-.=-   ..  .   .-. .---
+             oliioohbOOHDDDODHBB@B@@   .  @@H@  . @B@BB@@@H-.   .. ...    . -=.=
+..           ii++iilbOOOObbObODBHDBB@BB@@  BB@@@ HBB@ @ ... i. .-. .-+-..++-=li+
++            o+++=+olhOhDDHBODDDDODHH@@B@ @@HHHH@HB @.......@-..-. .+bo+i+++=ii+
+H.           i==+==+ohbbDB@  HHDbODH@@@B@@BHHBHHBHB@B ...   .@=---.-=lhhbho+====
+.           ..-o=+=-oDHHBH@@  @BHDHHB@BH@@HDDHbhhbbDH@ .  HB@  +=--+iObhDDb+oi-.
+              h@h=+-lBBBBh=@@   @BDDHHDHBBDDHDbbbbDHDOH  BOH@@ B-.-=+ohlbDObDh+-
+   ..       ..  @i--iB@@@HDB@BB @BHBBHH@BHDDDDDHDHHHHDBDODDH@@ o-...--+llhbObo-.
+    --..-.   l. @B==+DB@@@B@HH@@ BBBBBHBBHHDODB@BB  @BDOODHHBBHi=-.--- -iilho= .
+   .-=-----. @   @D=oH@@@@BBB  . BBHBHDHHOODHHHB@@@DhlbHDDDOHBBDBH.--- .-=i=-i-=
+   .--....---.    h==DH       ..@BHHHDDDHOODDDHB@BDhlbOHODDbDB@.-B..--.-==.-lhob
+    ..... --= @   h==l B@ ....  @HHHHHHB@BHODDDHDbhlhOHDDHDDOB .@B@@D===--=+OOOH
+    -...   .+ @@ @b++O@@@     @ @HHHHHBB@@HHHDObllolhbbOODODDB  @.@Hb=oi--i=hOOD
+         -..+B@@@@li-+H   .    @BBBHHHB@@BHBBObbbOllllODDODOH@@    @@DODD+oilhhi
+         .  -BB@@O=-..b.......  @BBHHHHHBDbHBObODHOlhbDHbbObB @ HB@BbOB@ Ohhbhii
+             @BBBh+...i ....     @BHHDDDOOhODOODHHDbbODhbbbDB@..BOHhoOH . Diooio
+             hBBDl+oi+o...     @ @BHODOObhhbhbOOOHObbOOlbbbohH.. Obiibb@@ lh-==o
+             .HHOi+i++obH.  @BB@BBHHObbhbhhblbbbDHlhbOllObbhoD. .@OhohhDHHOOooob
+         i.   bHb+++ioi+=i@ @B@BHHHHDblhbbhhlbhODh+ohbohhbDllO@ .@OholhbHDHBDooh
+         -=   +bhiloi++-==-iHHDODDODObhhbbhhllbOhi+iohlbbOBOhOHB . bllobOD h i-=
+         -+.  =iilhi- ---==--lbbbObbObhhhbhh+iolli==+lbDhDBBOODH@.@BbllhhbbDOH=-
+.       .--=  iHbhol+ ----=---+OhOlhOhlohlll+iooli--ilOOODDDDbODB@BDDllOOD@bHbb=
++olho-  .-.==oHHOhl=+i----....ohlbhhbhioi+ohiiioho=+lhODbbbOObbbOHBOblohOObObOhi
+HHHOOb   .--OBBHbOh+ioi=.--===hhihllhl+ooiohi=iohiiohhhObhhbblohbODOhoilOOOHbbbh
+HHDODD-   -D@ DDOhbhllhl---==ihl=lhhhb=iho=+olilliiohbohhllhholhbbObb+=lhhhOObDH
+bOOObi   .HHHHBBbhihhllh=----=l=.ohlbo-io+=-ohioiiiohhoioooooollhhbbOl=oloObbOhB
+bbl..    h@@BHHblhh+obioli---....=ii+i-+o-i-=lii=+iollo=ii++ioolhbbbOboolhhhbOlh
+OOO-     HbhO@Ohool++hl++i=------.+i-o--+-+--=====+iii====+iiolhhhbbhhhioollhbD-
+lli.... lolhoOlh+lOo=+ho---------.i=-i-==--=---=+=-====+iiooillllhhhhohoi+blhbH+
+  =+-...OBHohh++i+bl++---=-=--=---=+==------====+---==+iolhhollllllhllol+hDihbD+
+lbDOl= l@HiiDllo+=+iii--.=-=====---==-------===+=-==+iioollholllllllllol+ib+bDb+
+ODHBBh=HH+=hObObhll=+=i=.=======-.--=.--------=--+iioooooolloolllhollllliiholhh+
+hhhbblobo=lbhhlbhlo==+==-=====-=..--=-=+-==----==ioooolooolloolhlhooolllii+lblD=
+loi+iiiloohhbbobho+=ooi=--==-=--...---=+.========ioooooooiooooollhhi=oll===oOhb=
+HD--=+ibobObbhlohoi-=lo+---=----...---==-==+=====+iiiiiiiolooolllhhi=+oi--+iOhO+
+hbh+--lhlOOO+ooiioo==+i+--------...---+-===++=====+++++iiollooolllh+=+i+--+iOhb=
+lH@B=.OhbObo+iio+oli++=------.-- .---=+-+i============++iollooolllli+iii-=++Olh=
+ODHD=.OObo=+i++ilooo+++-=-=--.-   -=-+==+ii=========+=++iiolioillll++ooo==++Dll=
+hbbi .hDh+--i=olb+ioi++-=-=-=.. ..==i+=++i+=+========+++iiii+iiioll=illl+i++Oll=
+hho-+ iDb+ohi-ibOoiioi+-==--=-...=-i+++++++++========++++iiooi++ioo-illli+i+blo+
++ollHoODhibho=olOoioioi-===-==..-=++++iiiiii+++========++iiiooo+ii+=+lhlo+++boil
+=.obHOHOoohlli+oboioiii.-=====---=i=++ioi++++++=++=======+iiooiii+==oollli++boii
+bhhlDBHb+lllili=hl=i=--.-==-==-.====+iiii+++++++++=====++++=oiiioo==+ollloi=boi=
+bOhiOBOhihhi+hloili=----.-=-==-.====il+i+ii+ii+ii+++====++==+ii+oo==+lhhhoo=bili
+ObholHbolho+loooihoi+---....--..===++i+iiiiiii++++=======+=+=+=+ii+=+ihlloliliho
+h==iiHOobllillohhhlii---....-..-===+++oiiiiiii+i+i++++=====i+i+=+=++==+iiollli+l
+=   .BblObh+llobhhlii+.........-++=++ioi+iiioii=+++=++====+++++=+++++==+iolhoi+i
+.    HhiObooooilbbliio-... .. .-==++iiiiiiiiioi+++++++====++++=+=+++===+ooolhili
+i+. .Dlihhlohhoiobllio=..     --==++iiiiioiiii+++++++==+=+====++=+++-==iooollohO
+hb+..Oohbhl+Ohlo+lhbiii-.    .-=+=+++i+iiooiii+=+++++=====-==+i+-+++=.=-ioolllOD
+hbi=-booli+obbbl+lhblio-.    --+=++++i+iiooi+++=+++++=======+i+=.=++-...-+lll+lO
+hOi+=hooohohhDDo+ohbbol-..   --==++iio+iioooo-i+i+=++========+=--++=-..- =ho--+l
+bOi+=h=ohhlhlODloohbOol-..  -=+=++iioi+iiiooi=++++=i====--==+===-oi=-... -ii++=+
+oO+--h+hHllhllhililbOhl=-.  ++i==++iii++iiooi==+++=+===-====+=+-.oo=--=..-+hool+
+oo=.=h+hhhhlhllilolhbOoi-. .iii==+++i+=+iii===+=+==+-=--===+=== .io+---+l.obolOl
+oo= +hiOlhbllllillllbOoo-. =o++==+++++=++ii-==i+=++=======++==-  ++--.+li-lhloli
+i=- il+billbooiilhlhhbl+=..io++=++i+=+=-==-==++++i++++=+++++--.  ..-=-=o-=lhho+=
+OiioDh+hillllo+ilhhhhhh++-.o+++==+i===-...-=++=+i++i++++++++=-.  .-=.o+-=+hhbo==
+hObO@D=oilo+oho+lhhhhhl+==.=+++==++===-----=++=++iiiiii+=+----.  .==-h----ohOo.=
+=DOH@B.+olliohh+llhhhhl+==.-i++=====+ibbOb=-==++=====+i+=-..-.. .-o==+++-.-lOi-.
+lhO@@B=+ooolhhO+illhhhl++- -i+=--====ObDDOO=.---=..-..== ..----.-=o=.-iii- +h=..
+OlbBHDb-ioioObOl+ooolbii+= =i+=-===+bBbhHHD@=  .==-=i-oi. .-....-oo==-+ii+.--.--
+obDHD@B=loilODbb++iioiii+- +o==-==+ODDohDHODl .-=-=oh=lo----...-=o=+++-+++==- .=
+bhlODDl=ohhhbDhb+++ioioo+= +o==--=OHho++DDHlHbbbhlohOObboololbblioiooo+--=..   .
++oool+.ihhhhhOhbo=+ilioo== ioii--iOlhlhbbDHlDOhhhlohDbhbollllllhhbODOhl--=.     
+.=iii-.+Olhlhbhlb+iioii++. =lli+oODHHHHOlbDhDHhhhhliOBhlllllllhhhbbbbHDo==-.    
+bOiobi.=hohlhhhlbiiio++=-   +hOODBBDbObblbbhhbbbhhlhhlblhhhhhbhhhhhbbOObDOii-   
+loioh- -ioolllbohoiioi+...-lODHHHOObbbbbollh+olloi=-iohb=++iollhbObbbbhbbOHO-   
+o+ohbh.-ioiolobolo+ooooi-bHDH@HObbbOOObbllbl.----.==-+Oh...-.-=+iilbbObbbbbOHo  
+bi=oDDh-il+iiobool-+oooOHHBBHOObObOOObl+-ohl=.-=-=+=-+bo..--.-=++==++lhOObbbbOO+
+Hbi+bBO-oli++ihloh-+obHHHBHObbbOOObho+=. ohDi.--=o==-ih-..-..==ii+ .==+ihbbbbbbD
+HDhioHD=ohl=+iollb=bBHB@HbbObbOOboiooi==.+ODl-.-ol=- -...-..-=+io=-++=++=ilbObbb
+DBb-lDHoobb==iiiobDBB@HDObbOObhii=-ooi+=--+-l+=iOi...  ..- .=+ioo-ioiooooi=+lbbb
++bl -bH+oODo--++OBHB@ObbbOObhoo=o=-+iii=+==-+lbOo-...  .-..=+=oi-=loollolhl+=ihb
+-..  -+ iOObi=oHBB HbhbbOOho.io=o=--oii++++-=+iii.... ....-==-== ihlllllolhhl==o

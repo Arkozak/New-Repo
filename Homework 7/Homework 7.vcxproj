@@ -127,6 +127,7 @@
     <ClCompile Include="caesar-cypher.cpp" />
     <ClCompile Include="Color3.cpp" />
     <ClCompile Include="Image3.cpp" />
+    <ClCompile Include="rule30.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color3.hpp" />

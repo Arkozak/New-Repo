@@ -2,6 +2,27 @@
 // Implementation for Image3 class
 // Original Author: Jonathan Metzgar
 // CS 201 course
+
+#include "Image3.hpp"
+#include <iostream>
+#include <typeinfo>
+#include <fstream>
+#include <sstream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
+using std::istringstream;
+
+using std::ifstream;
+using std::ofstream;
+
+// Image3.hpp
+// Implementation for Image3 class
+// Original Author: Jonathan Metzgar
+// CS 201 course
 #include "Image3.hpp"
 
 // Image3 Constructor
@@ -21,8 +42,7 @@ const Color3& Image3::getPixel(unsigned x, unsigned y) const {
 	// Hint: maybe this is already in the class?
 	if ((y * w + x) > pixels.size())
 	{
-		Color3 color_temp(0, 0, 0);
-		return Color3();
+		return pixels[0];
 	}
 	return pixels[y * w + x];
 }
@@ -36,16 +56,15 @@ bool Image3::savePPM(const std::string& path) const {
 	// TODO: Save the image to the disk
 	// REQUIREMENT: Use the STREAM operators for the file contents
 	std::ofstream outp(path);
-	if (!outp) 
+	if (!outp)
 	{
 		return false;
 	}
 	outp << *this;
-	outp.close();
-	return false;
+	return true;
 }
 
-bool Image3::loadPPM(const std::string& path) {
+bool Image3::loadPPM(const std::string& path, std::string& file_contents) {
 	// TODO: Load an image from the disk
 	// REQUIREMENT: Use the STREAM operators for the file contents
 	std::ifstream inp(path);
@@ -53,21 +72,18 @@ bool Image3::loadPPM(const std::string& path) {
 	{
 		return false;
 	}
+	inp >> *this;
 	return true;
 }
 
-
 void Image3::printASCII(std::ostream& ostr) const {
 	// TODO: Print an ASCII version of this image
-	ostr << "P3\n";
-	ostr << w << " " << h << "\n";
-	ostr << 255;
-
+	
 	for (size_t i = 0; i < pixels.size(); i++)
 	{
 		ostr << pixels[i].asciiValue();
 
-		if (i != 0 && i % w == 9) 
+		if ((i + 1) % w == 0 && i != 0)
 		{
 			ostr << "\n";
 		}
@@ -79,22 +95,32 @@ void Image3::printASCII(std::ostream& ostr) const {
 std::ostream& operator<<(std::ostream& ostr, const Image3& image) {
 	// TODO: Write out PPM image format to stream
 	// ASSUME FORMAT WILL BE GOOD
-	ostr << "P3\n" << image.w << ' ' << image.h << "\n255";
-	for (Color3 px : image.pixels)
-	{
-		ostr << '\n' << px;
+	ostr << "P3\n";
+
+	ostr << image.w << " " << image.h << "\n";
+
+	for (size_t i = 0; i < image.pixels.size(); i++) {
+		ostr << image.pixels[i] << "\n";
 	}
+
 	return ostr;
 }
 
+// When sending an input stream to an image object, format as follows
 std::istream& operator>>(std::istream& istr, Image3& image) {
 	// TODO: Read in PPM image format from stream
 	// MAKE SURE FORMAT IS GOOD!!!
+
 	int first_three_vals = 0;
 
+	int temp_r = -1;
+	int temp_g = -1;
+	int temp_b = -1;
+
 	while (true) {
-		std::string line;
-		std::getline(istr, line);
+
+		string line;
+		getline(istr, line);
 
 		if (!istr)
 			break;
@@ -115,7 +141,7 @@ std::istream& operator>>(std::istream& istr, Image3& image) {
 		if (first_three_vals == 1) {
 			int temp_w;
 			int temp_h;
-			std::istringstream instr_wh(line);
+			istringstream instr_wh(line);
 
 			if (!instr_wh)
 				return istr;
@@ -135,12 +161,11 @@ std::istream& operator>>(std::istream& istr, Image3& image) {
 		}
 
 		if (first_three_vals == 2) {
-			std::istringstream instr_maxval(line);
+			istringstream instr_maxval(line);
 
 			if (!instr_maxval)
 				return istr;
 
-			// Can consider making the #define MAXVAL here instead something pulled from the value below
 			int maxval;
 			instr_maxval >> maxval;
 
@@ -149,20 +174,26 @@ std::istream& operator>>(std::istream& istr, Image3& image) {
 			continue;
 		}
 
-		std::istringstream instr_rgb(line);
-		int temp_r;
-		int temp_g;
-		int temp_b;
+		istringstream instr_rgb(line);
 
-		std::cout << "check: " << line << std::endl;
-		for (int i = 0; i < 3; i++) {
+		if (temp_r == -1) {
 			instr_rgb >> temp_r;
+		}
+		else if (temp_g == -1 && temp_r != -1) {
 			instr_rgb >> temp_g;
+		}
+		else if (temp_b == -1 && temp_r != -1 && temp_g != -1) {
 			instr_rgb >> temp_b;
+
+			image.pixels.push_back(Color3(temp_r, temp_g, temp_b));
 		}
 
-		image.pixels.push_back(Color3(temp_r, temp_g, temp_b));
-
+		if (temp_b != -1 && temp_r != -1 && temp_g != -1) {
+			temp_r = -1;
+			temp_g = -1;
+			temp_b = -1;
+		}
 	}
 
 	return istr;
+}

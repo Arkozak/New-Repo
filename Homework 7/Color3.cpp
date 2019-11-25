@@ -14,7 +14,7 @@ constexpr int saturate(int x, int maxvalue) {
 }
 
 Color3::Color3()
-	: r(255), g(255), b(255)
+	: r(0), g(0), b(0)
 { }
 
 Color3::Color3(int R, int G, int B) {
@@ -23,12 +23,12 @@ Color3::Color3(int R, int G, int B) {
 	b = (unsigned char)saturate(B, 255);
 }
 
-int Color3::weightedSum() const {
+int Color3::weightedSum() const {  // LOOK MEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 	// Implement Y = 0.2126R + 0.7152G + 0.0722B
 	// Ensure values are inside the range 0 to 255
-	int temp_r = 0.2126 * saturate((int)r, MAXVAL);
-	int temp_g = 0.7152 * saturate((int)g, MAXVAL);
-	int temp_b = 0.0722 * saturate((int)b, MAXVAL);
+	int temp_r = 0.2126 * saturate((double)r, MAXVAL);
+	int temp_g = 0.7152 * saturate((double)g, MAXVAL);
+	int temp_b = 0.0722 * saturate((double)b, MAXVAL);
 
 	// if (saturate(Y))
 
@@ -55,14 +55,15 @@ std::ostream& operator<<(std::ostream& ostr, const Color3& color) {
 
 std::istream& operator>>(std::istream& istr, Color3& color) {
 	// Implement your own input for a Color3
-  int r, g, b;
-  istr >> r;
-  istr >> g;
-  istr >> b;
+	int r, g, b;
+	istr >> r;
+	istr >> g;
+	istr >> b;
 
-  color.r = (r < 0) ? 0 : (r > 255) ? 255 : (unsigned char)r;
-  color.b = (b < 0) ? 0 : (b > 255) ? 255 : (unsigned char)b;
-  color.g = (g < 0) ? 0 : (g > 255) ? 255 : (unsigned char)g;
+	color.r = (r < 0) ? 0 : (r > 255) ? 255 : (unsigned char)r;
+	color.b = (b < 0) ? 0 : (b > 255) ? 255 : (unsigned char)b;
+	color.g = (g < 0) ? 0 : (g > 255) ? 255 : (unsigned char)g;
 
 	return istr;
 }
+

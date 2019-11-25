@@ -1,3 +1,10 @@
+/*
+asciiart.cpp
+Andrew Kozak
+Nov 24, 2019
+This program greates ascii "art" of stuff
+ */
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -14,15 +21,41 @@ using std::ofstream;
 
 
 int nonmain() {
-	
+
 	Image3 image(0, 0);
-	if (image.loadPPM("parrot.ppm")) {
-		std::cout << "Image loaded!" << std::endl;
-		image.printASCII(cout);
+
+	std::string input_path = "parrot.ppm";
+	std::string output_path = "test.ppm";
+	std::string ascii_output_path = "ascii.txt";
+
+	ifstream inp(input_path);
+
+	if (!inp) 
+	{
+		cout << "no input\n";
 	}
-	else {
-		std::cout << "Image failed to load!" << std::endl;
+		
+	inp >> image;
+	inp.close();
+
+	ofstream outp(output_path);
+	if (!outp) 
+	{
+		cout << "no output\n";
 	}
 
-	return 0;
+	outp << image;
+	outp.close();
+		
+	ofstream out(ascii_output_path);
+	if (!out) 
+	{
+		cout << "no output\n";
+	}
+	
+	image.printASCII(out);
+		
 }
+
+
+

@@ -33,6 +33,9 @@
     <ClCompile Include="caesar-cypher.cpp">
       <Filter>Additional</Filter>
     </ClCompile>
+    <ClCompile Include="rule30.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color3.hpp">
