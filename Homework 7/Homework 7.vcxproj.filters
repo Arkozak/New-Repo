@@ -30,6 +30,9 @@
     <ClCompile Include="Image3.cpp">
       <Filter>Main program</Filter>
     </ClCompile>
+    <ClCompile Include="caesar-cypher.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color3.hpp">

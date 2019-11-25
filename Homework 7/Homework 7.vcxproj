@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="asciiart.cpp" />
+    <ClCompile Include="caesar-cypher.cpp" />
     <ClCompile Include="Color3.cpp" />
     <ClCompile Include="Image3.cpp" />
   </ItemGroup>

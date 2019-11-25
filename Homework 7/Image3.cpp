@@ -52,52 +52,6 @@ bool Image3::loadPPM(const std::string& path) {
 	{
 		return false;
 	}
-
-	std::string line;
-	inp >> line;
-	if (!inp || line != "P3") return false; // Invalid format
-	pixels.clear(); // Empty the vector to add our data to.
-
-	bool widthSet, heightSet, colorspaceSet = false;
-
-	std::vector<int> rgb;
-
-	while (true)
-	{
-		std::getline(inp, line);
-		if (!inp)
-		{
-			return inp.eof();
-		}
-		if (line[0] == '#' || line == "") continue;
-		std::istringstream str(line);
-		while (str) 
-		{
-			int value;
-			str >> value;
-			if (!str) break;
-			if (!widthSet) 
-			{
-				w = value; 
-				widthSet = true;
-			}
-			if (!heightSet)
-			{
-				h = value;
-				heightSet = true;
-			}
-			if (!colorspaceSet)
-			{
-				colorspaceSet = true;
-			}
-			rgb.push_back(value);
-			if (rgb.size() == 3) 
-			{
-				pixels.push_back(Color3(rgb[0], rgb[1], rgb[2]));
-				rgb.clear();
-			}
-		}
-	}
 	return true;
 }
 
@@ -119,11 +73,66 @@ void Image3::printASCII(std::ostream& ostr) const {
 std::ostream& operator<<(std::ostream& ostr, const Image3& image) {
 	// TODO: Write out PPM image format to stream
 	// ASSUME FORMAT WILL BE GOOD
+	ostr << "P3\n" << image.w << ' ' << image.h << "\n255";
+	for (Color3 px : image.pixels)
+	{
+		ostr << '\n' << px;
+	}
 	return ostr;
 }
 
 std::istream& operator>>(std::istream& istr, Image3& image) {
 	// TODO: Read in PPM image format from stream
 	// MAKE SURE FORMAT IS GOOD!!!
+	std::vector<int> rgb;
+
+	std::string line;
+	istr >> line;
+
+	if (line != "P3") { // Invalid format
+		throw;
+	}
+	image.pixels.clear(); // Empty the vector to add our data to.
+
+	bool widthSet, heightSet, colorspaceSet = false;
+
+	while (true) {
+		std::getline(istr, line);
+		if (!istr) 
+		{
+			break;
+		}
+		if (line[0] == '#' || line == "") continue;
+		std::istringstream str(line);
+		while (str)
+		{
+			int value;
+			str >> value;
+			if (!str) break;
+			if (!widthSet) 
+			{
+				widthSet = true;
+				image.w = value;
+				continue;
+			}
+			if (!heightSet)
+			{
+				heightSet = true;
+				image.h = value;
+				continue;
+			}
+			if (!colorspaceSet)
+			{
+				colorspaceSet = true;
+				continue;
+			}
+			rgb.push_back(value);
+			if (rgb.size() == 3)
+			{
+				image.pixels.push_back(Color3(rgb[0], rgb[1], rgb[2]));
+				rgb.clear();
+			}
+		}
+	}
 	return istr;
 }
