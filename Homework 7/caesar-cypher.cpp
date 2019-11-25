@@ -1,3 +1,10 @@
+/*
+caesar-cypher.cpp
+Andrew Kozak
+Nov 24, 2019
+creates a caesar cypher from a string
+ */
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -102,7 +109,6 @@ int caesercypher()
 
 
 		cout << "Result: " << userin << "\n\n";
-
 		shift = 0;
 
 	}

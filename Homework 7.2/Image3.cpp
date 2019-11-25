@@ -15,6 +15,7 @@ using std::endl;
 using std::string;
 using std::vector;
 using std::istringstream;
+
 using std::ifstream;
 using std::ofstream;
 
@@ -71,7 +72,7 @@ bool Image3::loadPPM(const std::string& path, std::string& file_contents) {
 
 void Image3::printASCII(std::ostream& ostr) const {
 	// TODO: Print an ASCII version of this image
-	
+
 	for (size_t i = 0; i < pixels.size(); i++)
 	{
 		ostr << pixels[i].asciiValue();

@@ -1,3 +1,11 @@
+/*
+rule30.cpp.cpp
+Andrew Kozak
+Nov 24, 2019
+Creates the rule 30 cellular atomaton
+ */
+
+#include "Image3.hpp"
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -6,8 +14,7 @@ using std::endl;
 using std::vector;
 #include <fstream>
 using std::ofstream;
-
-
+#include <sstream>
 
 int main(int argc, char** argv)
 {
@@ -17,7 +24,17 @@ int main(int argc, char** argv)
 	int a = 0;
 	int b = 0;
 	int c = 0;
-	for (int i = 0; i < 40; i++)
+
+	int w = 40;
+	int h = 20;
+	if (argc == 3) {
+		std::istringstream wstr(argv[1]);
+		wstr >> w;
+		std::istringstream hstr(argv[2]);
+		hstr >> h;
+	}
+
+	for (int i = 0; i < w; i++)
 	{
 		rows.push_back(0);
 	}
@@ -30,7 +47,7 @@ int main(int argc, char** argv)
 	}
 	myfile << endl;
 
-	for (int y = 0; y < 19; y++)
+	for (int y = 0; y < h - 1; y++)
 	{
 		for (int i = 0; i < rows.size(); i++)
 		{
@@ -110,4 +127,5 @@ int main(int argc, char** argv)
 		}
 		myfile << endl;
 	}
+
 }

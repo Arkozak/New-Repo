@@ -19,8 +19,7 @@ using std::endl;
 using std::ifstream;
 using std::ofstream;
 
-
-int nonmain() {
+int main() {
 
 	Image3 image(0, 0);
 
