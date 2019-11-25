@@ -5,6 +5,7 @@
 #include <iomanip>
 #include "Color3.hpp"
 
+#define MAXVAL 255
 using std::setw;
 
 // Ensure values are in the range 0 to maxvalue
@@ -13,7 +14,7 @@ constexpr int saturate(int x, int maxvalue) {
 }
 
 Color3::Color3()
-	: r(0), g(0), b(0)
+	: r(255), g(255), b(255)
 { }
 
 Color3::Color3(int R, int G, int B) {
@@ -25,8 +26,13 @@ Color3::Color3(int R, int G, int B) {
 int Color3::weightedSum() const {
 	// Implement Y = 0.2126R + 0.7152G + 0.0722B
 	// Ensure values are inside the range 0 to 255
+	int temp_r = 0.2126 * saturate((int)r, MAXVAL);
+	int temp_g = 0.7152 * saturate((int)g, MAXVAL);
+	int temp_b = 0.0722 * saturate((int)b, MAXVAL);
 
-	return saturate(0.2126 * r + 0.7152 * g + 0.0722 * b, 255);
+	// if (saturate(Y))
+
+	return saturate(temp_r + temp_g + temp_b, MAXVAL);
 }
 
 char Color3::asciiValue() const {
@@ -34,7 +40,7 @@ char Color3::asciiValue() const {
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
 	const char values[] = "#@BHDObhloi*+=-.";
-	unsigned darkness = 15 - (weightedSum() / 15) % 15;
+	unsigned darkness = (weightedSum() / 15) % 15;
 	return values[darkness];
 }
 
@@ -54,9 +60,9 @@ std::istream& operator>>(std::istream& istr, Color3& color) {
   istr >> g;
   istr >> b;
 
-  color.r = saturate(r, 255);  
-  color.g = saturate(g, 255);
-  color.b = saturate(b, 255);
+  color.r = (r < 0) ? 0 : (r > 255) ? 255 : (unsigned char)r;
+  color.b = (b < 0) ? 0 : (b > 255) ? 255 : (unsigned char)b;
+  color.g = (g < 0) ? 0 : (g > 255) ? 255 : (unsigned char)g;
 
 	return istr;
 }

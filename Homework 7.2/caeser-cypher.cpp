@@ -26,7 +26,7 @@ bool isNumber(string filler)
 
 
 
-int main()
+int caesar()
 {
 	string userin = " ";
 	string filler;

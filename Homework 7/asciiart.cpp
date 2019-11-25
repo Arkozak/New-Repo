@@ -13,7 +13,8 @@ using std::ifstream;
 using std::ofstream;
 
 
-int main() {
+int nonmain() {
+	
 	Image3 image(0, 0);
 	if (image.loadPPM("parrot.ppm")) {
 		std::cout << "Image loaded!" << std::endl;
@@ -22,7 +23,6 @@ int main() {
 	else {
 		std::cout << "Image failed to load!" << std::endl;
 	}
-	
 
 	return 0;
 }

@@ -19,8 +19,9 @@ const Color3& Image3::getPixel(unsigned x, unsigned y) const {
 	// TERRIBLE OPTION 1: throw
 	// BETTER OPTION 2: return a color
 	// Hint: maybe this is already in the class?
-	if (y * w + x > pixels.size())
+	if ((y * w + x) > pixels.size())
 	{
+		Color3 color_temp(0, 0, 0);
 		return Color3();
 	}
 	return pixels[y * w + x];
@@ -58,12 +59,17 @@ bool Image3::loadPPM(const std::string& path) {
 
 void Image3::printASCII(std::ostream& ostr) const {
 	// TODO: Print an ASCII version of this image
-	for (auto i = 0; i < pixels.size(); i++) 
+	ostr << "P3\n";
+	ostr << w << " " << h << "\n";
+	ostr << 255;
+
+	for (size_t i = 0; i < pixels.size(); i++)
 	{
 		ostr << pixels[i].asciiValue();
-		if (((i + 1) % w == 0) && (i != 0))
+
+		if (i != 0 && i % w == 9) 
 		{
-			ostr << '\n';
+			ostr << "\n";
 		}
 	}
 }
@@ -84,57 +90,79 @@ std::ostream& operator<<(std::ostream& ostr, const Image3& image) {
 std::istream& operator>>(std::istream& istr, Image3& image) {
 	// TODO: Read in PPM image format from stream
 	// MAKE SURE FORMAT IS GOOD!!!
-	std::vector<int> rgb;
-
-	std::string line;
-	istr >> line;
-
-	if (line != "P3") { // Invalid format
-		throw;
-	}
-	image.pixels.clear(); // Empty the vector to add our data to.
-
-	bool widthSet = false;
-	bool heightSet = false;
-	bool colorspaceSet = false;
+	int first_three_vals = 0;
 
 	while (true) {
+		std::string line;
 		std::getline(istr, line);
-		if (!istr) 
-		{
+
+		if (!istr)
 			break;
-		}
-		if (line[0] == '#' || line == "") continue;
-		std::istringstream str(line);
-		while (str)
-		{
-			int value;
-			str >> value;
-			if (!str) break;
-			if (!widthSet) 
-			{
-				widthSet = true;
-				image.w = value;
+
+		if (line.at(0) == '#')
+			continue;
+
+		if (first_three_vals == 0) {
+			if (line == "P3") {
+				first_three_vals++;
 				continue;
 			}
-			if (!heightSet)
-			{
-				heightSet = true;
-				image.h = value;
-				continue;
-			}
-			if (!colorspaceSet)
-			{
-				colorspaceSet = true;
-				continue;
-			}
-			rgb.push_back(value);
-			if (rgb.size() == 3)
-			{
-				image.pixels.push_back(Color3(rgb[0], rgb[1], rgb[2]));
-				rgb.clear();
+			else {
+				return istr;
 			}
 		}
+
+		if (first_three_vals == 1) {
+			int temp_w;
+			int temp_h;
+			std::istringstream instr_wh(line);
+
+			if (!instr_wh)
+				return istr;
+
+			instr_wh >> temp_w;
+			if (temp_w < 0)
+				return istr;
+
+			instr_wh >> temp_h;
+			if (temp_h < 0)
+				return istr;
+
+			image.w = (unsigned)temp_w;
+			image.h = (unsigned)temp_h;
+			first_three_vals++;
+			continue;
+		}
+
+		if (first_three_vals == 2) {
+			std::istringstream instr_maxval(line);
+
+			if (!instr_maxval)
+				return istr;
+
+			// Can consider making the #define MAXVAL here instead something pulled from the value below
+			int maxval;
+			instr_maxval >> maxval;
+
+
+			first_three_vals++;
+			continue;
+		}
+
+		std::istringstream instr_rgb(line);
+		int temp_r;
+		int temp_g;
+		int temp_b;
+
+		std::cout << "check: " << line << std::endl;
+		for (int i = 0; i < 3; i++) {
+			instr_rgb >> temp_r;
+			instr_rgb >> temp_g;
+			instr_rgb >> temp_b;
+		}
+
+		image.pixels.push_back(Color3(temp_r, temp_g, temp_b));
+
 	}
+
 	return istr;
-}
