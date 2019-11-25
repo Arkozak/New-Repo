@@ -78,7 +78,7 @@ bool Image3::loadPPM(const std::string& path) {
 			if (!str) break;
 			if (!widthSet) 
 			{
-				w = value;
+				w = value; 
 				widthSet = true;
 			}
 			if (!heightSet)
@@ -104,6 +104,14 @@ bool Image3::loadPPM(const std::string& path) {
 
 void Image3::printASCII(std::ostream& ostr) const {
 	// TODO: Print an ASCII version of this image
+	for (auto i = 0; i < pixels.size(); i++) 
+	{
+		ostr << pixels[i].asciiValue();
+		if (((i + 1) % w == 0) && (i != 0))
+		{
+			ostr << '\n';
+		}
+	}
 }
 
 // STREAM OPERATORS for IMAGE3 class

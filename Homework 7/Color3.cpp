@@ -33,8 +33,8 @@ char Color3::asciiValue() const {
 	// Use at least 16 characters, sort these from dark to light
 	// or light to dark and then map the weightedSum() to the range
 	// 0 to 15. Please pick your own characters
-	const char values[] = "@&0%#?*+=-:,. ";
-	unsigned darkness = (weightedSum() / 15) % 15;
+	const char values[] = "#@BHDObhloi*+=-.";
+	unsigned darkness = 15 - (weightedSum() / 15) % 15;
 	return values[darkness];
 }
 
