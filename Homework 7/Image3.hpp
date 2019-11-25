@@ -6,6 +6,9 @@
 #define IMAGE3_CPP
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
 #include <vector>
 #include "Color3.hpp"
 

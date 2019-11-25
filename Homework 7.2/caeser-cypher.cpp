@@ -73,7 +73,8 @@ int main()
 				}
 				else if (x < 65)
 				{
-					userin[i] = 154 - x;
+					x = x - shift * 2;
+					userin[i] = 158 - x;
 				}
 				else
 				{
@@ -89,7 +90,8 @@ int main()
 				}
 				else if (x < 97)
 				{
-					userin[i] = 218 - x ;
+					x = x - shift * 2;
+					userin[i] = 222 - x ;
 				}
 				else
 				{
@@ -99,7 +101,7 @@ int main()
 		}
 		
 		
-		cout << "Result: " << userin << "\n\n" << x;
+		cout << "Result: " << userin << "\n\n";
 		
 		shift = 0;
 
