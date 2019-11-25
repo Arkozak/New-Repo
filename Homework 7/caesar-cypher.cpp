@@ -26,7 +26,7 @@ bool isNumber(string filler)
 
 
 
-int main()
+int caesercypher()
 {
 	string userin = " ";
 	string filler;

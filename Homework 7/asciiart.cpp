@@ -12,28 +12,17 @@ using std::endl;
 using std::ifstream;
 using std::ofstream;
 
+
 int main() {
-  Color3 myColor(38, 232, 12);
-  ofstream fout ("testfile.txt");
-  if (!fout) {
-    cout << "error opening file" << endl;
-    // something here to close the file or stop it from being used
-  }
-  fout << myColor;
-  fout.close();
-  ifstream fin ("testfile.txt");
-  if (!fin) {
-    cout << "error opening file for fin" << endl;
-    // ensure program stops
-    return 0;
-  }
-  fin >> myColor;
-  cout << myColor << ' ' << myColor.asciiValue() << ' ' << myColor.weightedSum() << std::endl;
-  fin.close();
+	Image3 image(0, 0);
+	if (image.loadPPM("parrot.ppm")) {
+		std::cout << "Image loaded!" << std::endl;
+		image.printASCII(cout);
+	}
+	else {
+		std::cout << "Image failed to load!" << std::endl;
+	}
+	
 
-  Image3 image(0, 0);
-  image.loadPPM("parrot.ppm");
-  cout << image << std::endl;
-
-  return 0;
+	return 0;
 }
