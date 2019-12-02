@@ -13,16 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Main program">
+      <UniqueIdentifier>{351dcee1-03f0-4bc4-b0e3-cfa731a9441f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Additional">
+      <UniqueIdentifier>{57238421-1925-42de-aeb5-f55ce3708c0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Random.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="asciiart.cpp">
+      <Filter>Main program</Filter>
     </ClCompile>
-    <ClCompile Include="Shopping.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Color3.cpp">
+      <Filter>Main program</Filter>
     </ClCompile>
-    <ClCompile Include="Hangman.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Image3.cpp">
+      <Filter>Main program</Filter>
     </ClCompile>
+    <ClCompile Include="caesar-cypher.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
+    <ClCompile Include="rule30.cpp">
+      <Filter>Additional</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Color3.hpp">
+      <Filter>Main program</Filter>
+    </ClInclude>
+    <ClInclude Include="Image3.hpp">
+      <Filter>Main program</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
