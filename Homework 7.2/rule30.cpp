@@ -16,7 +16,7 @@ using std::vector;
 using std::ofstream;
 #include <sstream>
 
-int main(int argc, char** argv)
+int boop(int argc, char** argv)
 {
 	ofstream myfile;
 	myfile.open("rule30.txt");
@@ -127,5 +127,5 @@ int main(int argc, char** argv)
 		}
 		myfile << endl;
 	}
-
+	return 0;
 }
