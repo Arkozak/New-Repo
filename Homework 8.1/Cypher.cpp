@@ -12,13 +12,31 @@ using std::random_device;
 using std::mt19937;
 using std::uniform_int_distribution;
 
+bool notin(string numbers, string guess)
+{
+	for (int i = 0; i < numbers.size(); i++)
+	{
+		if (numbers[i] == guess[i])
+		{
+			return 0;
+		}
+	}
+
+	return 1;
+}
+
+bool iscow(string number, string guess, int x)
+{
+
+}
+
 int main()
 {
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<int> distrib1(1, 2);
+	uniform_int_distribution<int> distrib1(0, 9);
 
-	vector<int> hidden;
+	string number = "";
 	string guess;
 	int x = 0;
 
@@ -27,68 +45,34 @@ int main()
 
 	for (auto i = 0; i < 4; i++) //Creating hidden vector
 	{
-		hidden.push_back(distrib1(gen));
-		cout << hidden[i];
+		guess = std::to_string(distrib1(gen));
+		if (notin(number, guess) == 1)
+		{
+			number = number + guess;
+		}
+		else
+		{
+			i = i - 1;
+		}
 	}
-	
 
 	while (true)
 	{
 		cout << "Guess a 4 digit number: " << endl; //grabbing guess
 		cin >> guess;
 
-		for (auto i = 0; i < 4; i++)
+		for (int i = 0; i < 4; i++)
 		{
-			switch (guess[i]) //first number
+			
+			if (guess[i] == number[i])
 			{
-			case '0':
-				x = 0;
-				break;
-			case '1':
-				x = 1;
-				break;
-			case '2':
-				x = 2;
-				break;
-			case '3':
-				x = 3;
-				break;
-			case '4':
-				x = 4;
-				break;
-			case '5':
-				x = 5;
-				break;
-			case '6':
-				x = 6;
-				break;
-			case '7':
-				x = 7;
-				break;
-			case '8':
-				x = 8;
-				break;
-			case '9':
-				x = 9;
-				break;
+				bulls++;
 			}
-
-			for (auto j = 0; j < 4; j++)
+			else if(iscow(number ,guess ,i))
 			{
-				if (x == hidden[j])
-				{
-					if (i == j)
-					{
-						bulls++;
-					}
-					else
-					{
-						cows++;
-					}
-				}
-
+				cows++;
 			}
-		}
+		}	
 
 		cout << "Bulls: " << bulls << endl;
 		cout << "Cows: " << cows << endl;
