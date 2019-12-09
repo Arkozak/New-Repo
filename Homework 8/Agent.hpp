@@ -7,7 +7,10 @@
 
 class Agent
 {
-
+	int temp;
+	int thermo;
+	int change;
+	Enviroment env;
 public: 
 	void preceive(Enviroment);
 	void think();

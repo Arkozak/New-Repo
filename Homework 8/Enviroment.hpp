@@ -9,9 +9,11 @@
 class Enviroment
 {
 	int temp;
-	int heater;
+	bool heat;
 
 public:
+	int gettemp();
+
 	void iteration();
 };
 
