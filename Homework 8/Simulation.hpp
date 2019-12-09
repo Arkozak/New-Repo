@@ -7,12 +7,13 @@
 
 class Simulation
 {
-	Enviroment env;
-	Agent age;
+	Enviroment Env;
+	Agent Age;
 
 public:
-	int temp;
-	int thermo;
+	Simulation();
+	Simulation(int t, int th);
+		
 	void run();
 	void askOwner();
 };

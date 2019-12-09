@@ -3,18 +3,23 @@
 #define Agent_hpp
 
 #include "Enviroment.hpp"
-#include "Simulation.hpp"
 
 class Agent
 {
 	int temp;
 	int thermo;
 	int change;
-	Enviroment env;
+	
 public: 
-	void preceive(Enviroment);
+	int getchange();
+	int getthermo();
+	void setthermo(int th);
+	Agent();
+	Agent(int t, int th);
+
+	void preceive(Enviroment env);
 	void think();
-	void act(Enviroment);
+	void act(Enviroment& env);
 
 };
 

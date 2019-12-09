@@ -3,16 +3,18 @@
 #define Enviroment_hpp
 
 
-#include "Agent.hpp"
-#include "Simulation.hpp"
+
 
 class Enviroment
 {
 	int temp;
-	bool heat;
+	int change;
 
 public:
+	Enviroment();
+	Enviroment(int temp);
 	int gettemp();
+	void getchange(int c);
 
 	void iteration();
 };

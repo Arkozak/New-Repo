@@ -8,34 +8,47 @@ using std::endl;
 using std::string;
 using std::getline;
 
+Simulation::Simulation() :
+	Env(),
+	Age()
+{}
+
+Simulation::Simulation(int t, int th) :
+	Env(t),
+	Age(t, th)
+{}
+
 void Simulation::run()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		age.preceive(env);
-		age.think();
-		age.act(env);
+		Age.preceive(Env);
+		Age.think();
+		Age.act(Env);
 
-		env.iteration();
+		Env.iteration();
 	}
 }
 
 void Simulation::askOwner()
 {
-	string boop;
-	cout << "The temp of the room is set to: " << temp << " degrees." << endl;
-	cout << "The thermostat of the room is set to: " << thermo << " degrees." << endl;
+	string boop = "";
+	int thermo;
+	cout << "The temp of the room is set to: " << Env.gettemp() << " degrees." << endl;
+	cout << "The thermostat of the room is set to: " << Age.getthermo() << " degrees." << endl;
 
-	cout << "Would you like to change the thermostat? (Y/N)";
-	getline(cin, boop);
+	cout << "Would you like to change the thermostat? (Y/N): ";
+	cin >> boop;
 
-	if (boop[0] == 'Y')
+	if (boop == "Y")
 	{
-		cout << "What would you like to change the thermostat to?";
+		cout << "What would you like to change the thermostat to? ";
 		cin >> thermo;
+		Age.setthermo(thermo);
 	}
-	else
+	else if (boop == "N")
 	{
 		cout << "OK" << endl;
 	}
+	
 }

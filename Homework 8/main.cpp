@@ -12,10 +12,7 @@ int main()
 {
 	int temp = 69;
 	int thermo = 69;
-	Simulation sim;
-	sim.thermo = thermo;
-	sim.temp = temp;
-
+	Simulation sim(temp, thermo);
 
 	while (true)
 	{
