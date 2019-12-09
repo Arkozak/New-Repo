@@ -4,6 +4,7 @@
 
 
 #include "Agent.hpp"
+#include "Simulation.hpp"
 
 class Enviroment
 {
@@ -12,7 +13,6 @@ class Enviroment
 
 public:
 	void iteration();
-
 };
 
 #endif

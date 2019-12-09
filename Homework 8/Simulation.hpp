@@ -7,8 +7,12 @@
 
 class Simulation
 {
-
+	Enviroment env;
+	Agent age;
 public:
+	int temp;
+	int thermo;
+	void run();
 	void askOwner();
 };
 #endif
