@@ -16,7 +16,7 @@ bool notin(string numbers, string guess)
 {
 	for (int i = 0; i < numbers.size(); i++)
 	{
-		if (numbers[i] == guess[i])
+		if (numbers[i] == guess[0])
 		{
 			return 0;
 		}
@@ -27,7 +27,17 @@ bool notin(string numbers, string guess)
 
 bool iscow(string number, string guess, int x)
 {
-
+	for (int i = 0; i < number.size(); i++)
+	{
+		if (x != i)
+		{
+			if (guess[i] == number[x])
+			{
+				return 1;
+			}
+		}
+	}
+	return 0;
 }
 
 int main()
@@ -55,6 +65,7 @@ int main()
 			i = i - 1;
 		}
 	}
+	cout << number;
 
 	while (true)
 	{
@@ -63,7 +74,6 @@ int main()
 
 		for (int i = 0; i < 4; i++)
 		{
-			
 			if (guess[i] == number[i])
 			{
 				bulls++;
