@@ -12,7 +12,7 @@ using std::random_device;
 using std::mt19937;
 using std::uniform_int_distribution;
 
-bool notin(string numbers, string guess)
+bool notin(string numbers, string guess) //Checks if the digit is already been added to the hidden number
 {
 	for (int i = 0; i < numbers.size(); i++)
 	{
@@ -25,7 +25,7 @@ bool notin(string numbers, string guess)
 	return 1;
 }
 
-bool iscow(string number, string guess, int x)
+bool iscow(string number, string guess, int x) //Determine if a cow exists
 {
 	for (int i = 0; i < number.size(); i++)
 	{
@@ -65,7 +65,6 @@ int main()
 			i = i - 1;
 		}
 	}
-	cout << number;
 
 	while (true)
 	{
