@@ -7,6 +7,15 @@
  * Practice using lambda functions
  */
 
+ /*
+  * @file     lambdas.hpp
+  * @author   Student Name
+  * @date     Mar 21, 2019
+  * John Quan
+  *
+  * Practice using lambda functions
+  */
+
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
@@ -22,26 +31,28 @@ int main() {
 	// TODO: REQUIRED
 	//       Create a vector<pair<size_t, string>> to enumerate
 	//       each string in the WIKIPEDIA_CPP string vector.
-	std::vector<std::pair<size_t, std::string>> sizestring;
-	
+	std::vector<std::pair<size_t, std::string>> v1;
+	std::pair<size_t, std::string> filler;
 	for (auto i : WIKIPEDIA)
 	{
-		sizestring.pushback(std::make_pair(s.size(), s));
-		std::cout << s.size() << " " << s << std::endl;
-		
-
+		filler.first = i.size();
+		filler.second = i;
+		v1.push_back(filler);
 	}
+	std::vector<std::pair<size_t, std::string>> v2;
 
 	// TODO: REQUIRED
 	//       Use std::sort with a comparison lambda function that sorts
 	//       the vector pairs with the first member in descending order.
-
+	std::sort(v1.begin(), v1.end(), [](std::pair<size_t, std::string> a , std::pair<size_t, std::string> b) {
+		return a.first > b.first;
+		});
 
 
 	// TODO: REQUIRED
 	//       Use printVectorPairs() to print the vector
-
-
+	
+	
 
 	// TODO: ADDITIONAL 1
 	//       Use std::sort with a comparison lambda function that sorts
